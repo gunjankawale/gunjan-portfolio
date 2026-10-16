@@ -11,7 +11,7 @@ Open `index.html` in a browser. Visitors can select a station in the data operat
 - `index.html` — portfolio content and interactive room
 - `styles.css` — responsive layout, game environment, and motion
 - `script.js` — movement, station navigation, and accessibility behavior
-- `Gunjan_Kawale_Resume.pdf` — downloadable résumé
+- `Gunjan_Kawale_Resume.pdf` — downloadable résumé (public copy with mobile number removed)
 - `build_resume.py` — ReportLab source used to create the résumé PDF
 
 The folder can also be deployed to a static host such as GitHub Pages.
