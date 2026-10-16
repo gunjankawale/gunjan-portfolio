@@ -38,6 +38,33 @@
         element.classList.add('reveal');
         revealObserver.observe(element);
       });
+
+      const formatCount = (value, decimals) => value.toFixed(decimals).replace(/\.0$/, '');
+      const countObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const counter = entry.target;
+          observer.unobserve(counter);
+          const end = Number(counter.dataset.count);
+          const rangeEnd = Number(counter.dataset.countEnd || end);
+          const decimals = Number(counter.dataset.decimals || 0);
+          const startTime = performance.now();
+          const duration = 1100;
+
+          const tick = (now) => {
+            const progress = Math.min((now - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = end * eased;
+            const currentRangeEnd = rangeEnd * eased;
+            const first = formatCount(current, decimals);
+            const second = formatCount(currentRangeEnd, decimals);
+            counter.textContent = rangeEnd === end ? first : `${first}–${second}`;
+            if (progress < 1) window.requestAnimationFrame(tick);
+          };
+          window.requestAnimationFrame(tick);
+        });
+      }, { threshold: 0.55 });
+      document.querySelectorAll('.count-value').forEach((counter) => countObserver.observe(counter));
     }
   }
 })();
