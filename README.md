@@ -15,3 +15,5 @@ Open `index.html` in a browser. Visitors can select a station in the data operat
 - `build_resume.py` — ReportLab source used to create the résumé PDF
 
 The folder can also be deployed to a static host such as GitHub Pages.
+
+GitHub CLI 2.102.0 is installed locally at `.tools/bin/gh` for repository setup. The binary is ignored by Git and is not included in the source history.
