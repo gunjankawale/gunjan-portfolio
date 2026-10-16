@@ -12,22 +12,25 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="topbar">
     <a class="wordmark" href="#home" aria-label="Gunjan Kawale, home">GK<span>.</span></a>
     <nav aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#work">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#toolkit">Toolkit</a>
+      <a href="#contact">Contact</a>
     </nav>
     <div class="header-actions"><button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle color theme"><span class="theme-icon">◐</span></button><a class="contact-link" href="mailto:gunjanworkspace@gmail.com">Let’s talk <span>↗</span></a></div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero" id="home">
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot"></span> DATA ENGINEER <span class="eyebrow-sep">/</span> NAGPUR, INDIA</p>
-        <h1>Azure Data Engineer<br /><em>Cloud workflows &amp; migration</em></h1>
-        <p class="hero-intro">Building and migrating data workflows from Redpoint to Azure with Logic Apps, SQL, and reliable data engineering practices.</p>
+        <h1>Azure Data Engineer<br /><em>Reliable data, built to move.</em></h1>
+        <p class="hero-intro">I build SQL pipelines and cloud workflows that teams can monitor, recover, and maintain—from Redpoint-to-Azure migrations to systems processing 10M+ records a day.</p>
         <div class="hero-actions">
           <a class="button button-dark" href="#work">View experience <span>↓</span></a>
           <a class="resume-link" href="Gunjan_Kawale_Resume.pdf" download>Download résumé <span>↓</span></a>
@@ -35,40 +38,40 @@
         </div>
         <div class="hero-meta"><span>CORE SKILLS</span> Azure · Logic Apps · SQL · Data pipelines <span class="hero-linkedin"><a href="https://www.linkedin.com/in/gunjan-kawale" target="_blank" rel="noreferrer">LINKEDIN ↗</a></span></div>
       </div>
-      <div class="hero-visual game-map game-room" tabindex="0" aria-label="Interactive data engineering environment. Use arrow keys or WASD to walk, click the floor to move, or select a station.">
+      <div class="hero-visual game-map game-room" tabindex="0" aria-label="Interactive portfolio illustration. Use the station links to jump to portfolio sections, or arrow keys to move the character.">
         <div class="game-hud"><span>GUNJAN.EXE <b>v4.0</b></span><span>● SYSTEM ONLINE</span></div>
         <div class="room-back-wall"><div class="wall-light"></div><div class="wall-grid"></div>
           <div class="room-sign">DATA OPERATIONS CENTER <span>EST. 2021</span></div>
-          <button class="station station-redpoint" data-destination="experience" aria-label="Walk into the experience archive"><span>01</span><b>EXPERIENCE</b><small>CAREER ARCHIVE</small><i>↗</i></button>
-          <button class="station station-azure" data-destination="profile" aria-label="Walk into the engineer profile"><span>02</span><b>PROFILE</b><small>ENGINEER DOSSIER</small><i>↗</i></button>
-          <button class="station station-wiki" data-destination="skills" aria-label="Walk into the skills library"><span>03</span><b>SKILLS LIBRARY</b><small>TOOLS &amp; TRAINING</small><i>↗</i></button>
+          <a class="station station-redpoint" href="#work"><span>01</span><b>EXPERIENCE</b><small>CAREER ARCHIVE</small><i>↗</i></a>
+          <a class="station station-azure" href="#about"><span>02</span><b>PROFILE</b><small>ENGINEER DOSSIER</small><i>↗</i></a>
+          <a class="station station-wiki" href="#toolkit"><span>03</span><b>SKILLS LIBRARY</b><small>TOOLS &amp; TRAINING</small><i>↗</i></a>
           <div class="server-stack"><i></i><i></i><i></i><i></i><span>PIPELINE<br />STATUS<br /><b>99.9%</b></span></div>
           <div class="data-screen"><span>DAILY RECORDS</span><strong>10M+</strong><div class="screen-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
         </div>
         <div class="room-floor"><div class="floor-grid"></div><div class="floor-glow"></div>
-          <button class="player-character" type="button" aria-label="Player character, Gunjan. Use arrow keys or WASD to walk"><span class="player-shadow"></span><span class="player-body"><i class="player-head"></i><i class="player-torso">GK</i><i class="player-leg leg-left"></i><i class="player-leg leg-right"></i></span><span class="player-name">GUNJAN</span></button>
-          <div class="walking-prompt"><span class="keycap">↑</span><span class="keycap">←</span><span class="keycap">↓</span><span class="keycap">→</span><span>WALK</span><span class="prompt-divider">·</span><span>SELECT A STATION</span></div>
+          <div class="player-character" aria-hidden="true"><span class="player-shadow"></span><span class="player-body"><i class="player-head"></i><i class="player-torso">GK</i><i class="player-leg leg-left"></i><i class="player-leg leg-right"></i></span><span class="player-name">GUNJAN</span></div>
+          <div class="walking-prompt"><span class="keycap">↑</span><span class="keycap">←</span><span class="keycap">↓</span><span class="keycap">→</span><span>OPTIONAL: WALK</span><span class="prompt-divider">·</span><span>OR SCROLL</span></div>
         </div>
-        <div class="game-toast" role="status" aria-live="polite">Select a station to explore</div>
+        <div class="game-toast" role="status" aria-live="polite">Use station links or scroll to explore</div>
         <div class="visual-caption"><span class="caption-line"></span> INTERACTIVE PORTFOLIO ENVIRONMENT</div>
       </div>
-      <div class="hero-bottom"><span>01 — 04</span><span class="scroll-cue">SELECT A STATION TO ENTER <span>↗</span></span><span>PORTFOLIO · 2026</span></div>
+      <div class="hero-bottom"><span>GUNJAN KAWALE</span><a class="scroll-cue" href="#about">SCROLL TO EXPLORE <span>↓</span></a><span>PORTFOLIO · 2026</span></div>
     </section>
 
     <section class="intro-section section-wrap" id="about">
       <div class="section-kicker"><span>01</span><span class="kicker-rule"></span><span>THE THROUGHLINE</span></div>
       <div class="intro-grid">
         <h2>Reliable data.<br /><em>Real-world impact.</em></h2>
-        <div class="intro-copy"><p>I’m Gunjan, a data engineer with 4+ years of experience designing data pipelines, migrations, and warehouse solutions. I care about the details that make systems dependable: clean transformations, thoughtful recovery paths, and clear documentation.</p><p>These days, I’m back at OneData, helping move Redpoint projects to Azure and building new workflows with Logic Apps. I also use AI to help maintain practical wiki documentation for migrated workflows.</p><a class="text-link underlined" href="mailto:gunjanworkspace@gmail.com">A little more about working together <span>↗</span></a></div>
+        <div class="intro-copy"><p>I’m Gunjan, a data engineer with 4+ years of experience building data pipelines, migrations, and warehouse solutions. I focus on dependable systems: clean transformations, practical recovery paths, and documentation teams can use.</p><p>At OneData, I’m moving Redpoint workflows to Azure, creating automations with Logic Apps, and maintaining useful wiki documentation for migrated workflows.</p><a class="text-link underlined" href="mailto:gunjanworkspace@gmail.com">Let’s talk about your data work <span>↗</span></a></div>
       </div>
-      <div class="metrics-row"><div class="metric"><strong>4<span>+</span></strong><span>YEARS IN DATA ENGINEERING</span></div><div class="metric"><strong>10<span>M+</span></strong><span>DAILY RECORDS PROCESSED</span></div><div class="metric"><strong>99.9<span>%</span></strong><span>PIPELINE SLA ACHIEVED</span></div><div class="metric-note">Built with care<br />for what comes next <span>↗</span></div></div>
+      <div class="metrics-row"><div class="metric"><strong>4<span>+</span></strong><span>YEARS IN DATA ENGINEERING</span></div><div class="metric"><strong>10<span>M+</span></strong><span>DAILY RECORDS · HELSON</span></div><div class="metric"><strong>99.9<span>%</span></strong><span>PIPELINE SLA · HELSON</span></div><div class="metric-note">Measured outcomes<br />from production work <span>↗</span></div></div>
     </section>
 
     <section class="work-section" id="work">
       <div class="section-wrap">
         <div class="section-kicker light-kicker"><span>02</span><span class="kicker-rule"></span><span>PROFESSIONAL EXPERIENCE</span></div>
         <div class="work-heading"><h2>Data engineering<br /><em>in practice.</em></h2><p>Cloud migration, high-volume pipelines, data integration, and production reliability across multiple engineering teams.</p></div>
-        <article class="featured-work" tabindex="0" aria-label="OneData Azure migration project. Press Enter to toggle details.">
+        <article class="featured-work">
           <div class="featured-top"><span class="tag">CURRENT ROLE</span><span class="mono">JUNE 2026 — PRESENT</span></div>
           <div class="featured-body"><div><p class="company-label">ONEDATA <span>·</span> AZURE DATA ENGINEER</p><h3>Taking workflows<br />from Redpoint to Azure.</h3></div><div class="featured-detail"><p>Modernizing existing projects and creating new workflow automations with Azure Logic Apps, with documentation that helps teams understand and support each migration.</p><div class="tag-list"><span>AZURE</span><span>LOGIC APPS</span><span>REDPOINT</span><span>AI-ASSISTED DOCS</span></div></div></div>
           <div class="migration-flow"><div class="flow-system"><span class="flow-glyph">▤</span><span>REDPOINT</span></div><div class="flow-track"><span class="flow-dash"></span><span class="flow-arrow">→</span></div><div class="flow-system azure-system"><span class="flow-glyph">☁</span><span>AZURE</span></div><div class="flow-caption">MIGRATE · REBUILD · DOCUMENT</div></div>
@@ -82,8 +85,18 @@
       </div>
     </section>
 
+    <section class="projects-section section-wrap" id="projects">
+      <div class="section-kicker"><span>03</span><span class="kicker-rule"></span><span>SELECTED PROJECT OUTCOMES</span></div>
+      <div class="projects-heading"><h2>Engineering work,<br /><em>with measurable results.</em></h2><p>Selected outcomes from production data engineering roles. Client and system details are kept high level.</p></div>
+      <div class="projects-grid">
+        <article class="project-card"><div class="project-meta"><span>PIPELINE PERFORMANCE</span><span>HELSON · 2025–2026</span></div><h3>More data. Faster, more reliable runs.</h3><p>Built SQL pipelines handling high-volume daily workloads and strengthened monitoring, recovery, and validation.</p><div class="project-results"><strong>10M+</strong><span>records processed daily</span><strong>35–40%</strong><span>runtime reduction with delta loads</span><strong>99.9%</strong><span>pipeline SLA achieved</span><strong>30%</strong><span>fewer reporting defects</span></div><div class="project-tags"><span>SQL</span><span>DELTA LOADS</span><span>MONITORING</span><span>VALIDATION</span></div></article>
+        <article class="project-card"><div class="project-meta"><span>DATA MIGRATION</span><span>THINK360.AI · 2021–2022</span></div><h3>Move 5TB+ with near-zero downtime.</h3><p>Migrated production data and improved the surrounding ingestion and retrieval workflows.</p><div class="project-results"><strong>5TB+</strong><span>production data migrated</span><strong>20%</strong><span>less manual ingestion effort</span><strong>28%</strong><span>faster data retrieval</span></div><div class="project-tags"><span>MIGRATION</span><span>INGESTION</span><span>PERFORMANCE</span></div></article>
+        <article class="project-card"><div class="project-meta"><span>REUSABLE ETL</span><span>DFIN · 2023–2024</span></div><h3>Make integration work repeatable.</h3><p>Integrated REST APIs and semi-structured data, added audit tracking, and created reusable ETL templates.</p><div class="project-results"><strong>25%</strong><span>faster onboarding with reusable templates</span></div><div class="project-tags"><span>REST APIS</span><span>ETL</span><span>AUDIT TRACKING</span></div></article>
+      </div>
+    </section>
+
     <section class="toolkit-section section-wrap" id="toolkit">
-      <div class="section-kicker"><span>03</span><span class="kicker-rule"></span><span>TECHNICAL SKILLS</span></div>
+      <div class="section-kicker"><span>04</span><span class="kicker-rule"></span><span>TECHNICAL SKILLS</span></div>
       <div class="toolkit-heading"><h2>A toolkit for<br /><em>dependable data.</em></h2><p>Strong SQL foundations, practical orchestration, and an eye for data quality. Always learning, always improving the way work gets done.</p></div>
       <div class="skills-grid">
         <article class="skill-card skill-primary"><span class="skill-index">01 / BUILD</span><div class="skill-icon">⌘</div><h3>Pipeline engineering</h3><p>ETL/ELT, incremental and delta loads, reusable transformations, SCD Type 2, and data warehousing.</p><div class="skill-tags"><span>SQL</span><span>ETL / ELT</span><span>SSIS</span></div></article>
@@ -95,17 +108,13 @@
     </section>
 
     <section class="education-section">
-      <div class="section-wrap education-inner"><div class="section-kicker"><span>04</span><span class="kicker-rule"></span><span>FOUNDATIONS</span></div><h2>Built on strong<br /><em>foundations.</em></h2><div class="education-list"><div><span>2015 — 2019</span><strong>Bachelor of Engineering, Computer Science</strong><small>Priyadarshini Institute of Engineering &amp; Technology · Nagpur</small></div><div><span>2020 — 2021</span><strong>Post Graduate Diploma, Advanced Computing</strong><small>Sunbeam Institute of Information Technology · Pune</small></div></div></div>
+      <div class="section-wrap education-inner"><div class="section-kicker"><span>05</span><span class="kicker-rule"></span><span>FOUNDATIONS</span></div><h2>Built on strong<br /><em>foundations.</em></h2><div class="education-list"><div><span>2015 — 2019</span><strong>Bachelor of Engineering, Computer Science</strong><small>Priyadarshini Institute of Engineering &amp; Technology · Nagpur</small></div><div><span>2020 — 2021</span><strong>Post Graduate Diploma, Advanced Computing</strong><small>Sunbeam Institute of Information Technology · Pune</small></div></div></div>
       <div class="education-shape" aria-hidden="true"><div class="shape-ring ring-a"></div><div class="shape-ring ring-b"></div><div class="shape-dot"></div></div>
     </section>
 
-    <section class="contact-section" id="contact"><div class="contact-orbit orbit-left"></div><div class="section-wrap contact-inner"><p class="eyebrow">HAVE A DATA CHALLENGE?</p><h2>Let’s make it<br /><em>make sense.</em></h2><p class="contact-copy">If you’re building, migrating, or improving data workflows, I’d be glad to connect.</p><a class="button button-light" href="mailto:gunjanworkspace@gmail.com">Start a conversation <span>↗</span></a><div class="contact-details"><a href="mailto:gunjanworkspace@gmail.com">GUNJANWORKSPACE@GMAIL.COM</a><a href="https://www.linkedin.com/in/gunjan-kawale" target="_blank" rel="noreferrer">LINKEDIN ↗</a><span>NAGPUR, MAHARASHTRA · INDIA</span></div></div><div class="contact-orbit orbit-right"></div></section>
+    <section class="contact-section" id="contact"><div class="contact-orbit orbit-left"></div><div class="section-wrap contact-inner"><p class="eyebrow">HAVE A DATA CHALLENGE?</p><h2>Let’s make it<br /><em>make sense.</em></h2><p class="contact-copy">If you’re building, migrating, or improving data workflows, I’d be glad to connect.</p><a class="button button-light" href="mailto:gunjanworkspace@gmail.com">Start a conversation <span>↗</span></a><div class="contact-details"><a href="mailto:gunjanworkspace@gmail.com">GUNJANWORKSPACE@GMAIL.COM</a><a href="https://www.linkedin.com/in/gunjan-kawale" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="https://github.com/gunjankawale" target="_blank" rel="noreferrer">GITHUB ↗</a><span>NAGPUR, MAHARASHTRA · INDIA</span></div></div><div class="contact-orbit orbit-right"></div></section>
   </main>
-  <section class="interior-screen" aria-label="Portfolio room" aria-modal="true" role="dialog" hidden>
-    <div class="interior-backdrop"></div>
-    <div class="interior-console"><div class="interior-topline"><span class="interior-path">DATA OPERATIONS CENTER / <b>PROFILE</b></span><button class="exit-interior" type="button"><span>←</span> RETURN TO ROOM</button></div><div class="interior-content"></div></div>
-  </section>
-  <footer class="footer"><a class="wordmark" href="#home">GK<span>.</span></a><span>BUILT WITH INTENTION · © 2026 GUNJAN KAWALE</span><a href="#home">BACK TO TOP ↑</a></footer>
+  <footer class="footer"><a class="wordmark" href="#home">GK<span>.</span></a><span>BUILT WITH INTENTION · © 2026 GUNJAN KAWALE</span><div><a href="https://github.com/gunjankawale/gunjan-portfolio" target="_blank" rel="noreferrer">SOURCE ↗</a><a href="#home">BACK TO TOP ↑</a></div></footer>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <script src="script.js"></script>
 </body>

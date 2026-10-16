@@ -1,10 +1,10 @@
 # Gunjan Kawale — Portfolio
 
-An interactive portfolio for Gunjan Kawale, Azure Data Engineer. The site is built with plain HTML, CSS, and JavaScript and has no package installation or build step.
+Portfolio for Gunjan Kawale, Azure Data Engineer. The site is built with plain HTML, CSS, and JavaScript and has no package installation or build step. It uses a scroll-first layout, with an optional interactive hero illustration.
 
 ## Preview locally
 
-Open `index.html` in a browser. Visitors can select a station in the data operations room to open the profile, experience, or skills panel. Arrow keys or WASD move the character while the room is focused.
+Open `index.html` in a browser. The main sections are available by scrolling or using the navigation. The hero illustration's stations jump to the related sections; arrow keys or WASD can optionally move the character while the illustration is focused.
 
 ## Files
 
@@ -14,6 +14,8 @@ Open `index.html` in a browser. Visitors can select a station in the data operat
 - `Gunjan_Kawale_Resume.pdf` — downloadable résumé (public copy with mobile number removed)
 - `build_resume.py` — ReportLab source used to create the résumé PDF
 
-The folder can also be deployed to a static host such as GitHub Pages.
+## Deploy with GitHub Pages
 
-GitHub CLI 2.102.0 is installed locally at `.tools/bin/gh` for repository setup. The binary is ignored by Git and is not included in the source history.
+The `Deploy to GitHub Pages` workflow publishes the static site on each push to `main`. The repository's Pages source is configured as **GitHub Actions**. The site will be available at `https://gunjankawale.github.io/gunjan-portfolio/` after the first successful workflow run.
+
+GitHub CLI 2.102.0 is available locally at `.tools/bin/gh` for repository setup. The binary is ignored by Git and is not included in the source history.
