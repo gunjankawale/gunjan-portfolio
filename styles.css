@@ -54,3 +54,11 @@ a,button{-webkit-tap-highlight-color:transparent}
 .learning-row{grid-template-columns:1.05fr repeat(2,minmax(0,1fr))}
 @media(max-width:760px){.learning-row{grid-template-columns:1fr}}
 @media(max-width:500px){.learning-row{grid-template-columns:1fr}}
+
+/* Keep supporting text readable while retaining the compact label style. */
+.hero-intro,.section-summary,.role-description p,.timeline-detail,.impact-card>p,.skill-tile p,.about-copy>p:not(.section-label),.contact-inner>p:not(.section-label){font-size:14px}
+.timeline-role p,.education-block small{font-size:12px}
+.eyebrow,.section-label,.hero-index,.panel-topline,.panel-bottom,.panel-file,.company,.role-date,.timeline-date,.impact-card-head,.skill-number,.tool-stack-label,.education-block>span,.contact-email,.contact-actions>a:not(.button),.site-footer>span,.site-footer>a:last-child{font-size:10px}
+.case-stack span,.panel-tags span,.tag-row span,.skill-tile .tag-row span,.tool-stack>span:not(.tool-stack-label){font-size:9px}
+.header-resume,.header-contact,.main-nav a,.button{font-size:12px}
+@media(max-width:500px){.eyebrow,.hero-index,.role-date,.timeline-date,.impact-card-head,.contact-email,.site-footer>span,.site-footer>a:last-child{font-size:9px}.header-resume,.header-contact,.main-nav a,.button{font-size:10px}.contact-email{letter-spacing:.7px}}
