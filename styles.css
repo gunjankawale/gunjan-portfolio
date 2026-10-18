@@ -49,8 +49,8 @@ a,button{-webkit-tap-highlight-color:transparent}
 .case-approach{position:relative;z-index:1;max-width:520px;margin-top:24px;padding:14px 16px;border-left:2px solid var(--lime);background:rgba(9,25,20,.2)}.case-approach>span{color:var(--lime);font:8px var(--mono);letter-spacing:1px}.case-approach p{margin:8px 0 0;color:#c3d0c4;font-size:10px;line-height:1.7}
 .section-label,.eyebrow,.hero-index{font-size:9px}.panel-topline,.panel-bottom,.panel-file{font-size:9px}.panel-file small{font-size:8px}.timeline-date,.role-date,.company{font-size:9px}.timeline-detail{font-size:12px}.timeline-role p{font-size:11px}.role-description p{font-size:13px}.impact-card-head{font-size:8px}.impact-card>p{font-size:12px}.impact-card-migration>p,.impact-card-integration>p{font-size:11px}.impact-stats small{font-size:10px}.mini-metrics span{font-size:9px}.case-stack span,.panel-tags span,.tag-row span,.skill-tile .tag-row span{font-size:8px}.skill-tile p{font-size:11px}.skill-number{font-size:9px}.learning-title,.education-block>span{font-size:9px}.learning-row strong,.education-block strong{font-size:12px}.learning-row small,.education-block small{font-size:10px}.about-copy>p:not(.section-label){font-size:13px}.about-caption{font-size:8px}.contact-actions>a:not(.button){font-size:9px}.contact-email{font-size:9px}.site-footer>span,.site-footer>a:last-child{font-size:8px}
 .impact-stats strong .count-value{color:inherit;font-size:1em}
-@media(max-width:760px){.learning-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.learning-row{grid-template-columns:1fr}}
 @media(max-width:500px){.learning-row{grid-template-columns:1fr}.case-approach p{font-size:11px}.tool-stack{gap:6px}.tool-stack-label{flex-basis:100%}}
 .learning-row{grid-template-columns:1.05fr repeat(2,minmax(0,1fr))}
-@media(max-width:760px){.learning-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.learning-row{grid-template-columns:1fr}}
 @media(max-width:500px){.learning-row{grid-template-columns:1fr}}
