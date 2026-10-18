@@ -19,8 +19,21 @@ PHONE = re.compile(r"(?<!\d)(?:\+?91[ -]?)?\d{10}(?!\d)")
 
 doc = Document(DOCX_PATH)
 removed = 0
+old_summary = (
+    "Data Engineer with 5+ years of experience in SQL development, ETL processes, data warehousing, "
+    "data migration, and workflow automation on financial-services projects (DFIN, ICICI Bank). "
+    "Experienced in building and migrating Redpoint workflows and developing Azure Logic Apps "
+    "workflows that call Azure Function App APIs and use Blob Storage, focused on data accuracy and consistency."
+)
+new_summary = (
+    "Data Engineer with 5+ years of experience in SQL development, ETL, data warehousing, data migration, "
+    "and workflow automation. Experienced in developing Redpoint workflows and Azure Logic Apps, including "
+    "production workflow migration, API integrations, SQL-based processing, testing, monitoring, and troubleshooting. "
+    "Contributed to data engineering work for DFIN and ICICI Bank."
+)
 for paragraph in doc.paragraphs:
     for run in paragraph.runs:
+        run.text = run.text.replace(old_summary, new_summary)
         run.text = re.sub(r"\s+\|\s+(?:Grade:\s*A|CGPA:\s*6\.48)\s*$", "", run.text)
         if PHONE.search(run.text):
             run.text, count = re.subn(r"\s*\|\s*" + PHONE.pattern, "", run.text, count=1)
