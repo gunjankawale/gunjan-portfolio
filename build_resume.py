@@ -21,6 +21,7 @@ doc = Document(DOCX_PATH)
 removed = 0
 for paragraph in doc.paragraphs:
     for run in paragraph.runs:
+        run.text = re.sub(r"\s+\|\s+(?:Grade:\s*A|CGPA:\s*6\.48)\s*$", "", run.text)
         if PHONE.search(run.text):
             run.text, count = re.subn(r"\s*\|\s*" + PHONE.pattern, "", run.text, count=1)
             removed += count
