@@ -62,3 +62,5 @@ a,button{-webkit-tap-highlight-color:transparent}
 .case-stack span,.panel-tags span,.tag-row span,.skill-tile .tag-row span,.tool-stack>span:not(.tool-stack-label){font-size:9px}
 .header-resume,.header-contact,.main-nav a,.button{font-size:12px}
 @media(max-width:500px){.eyebrow,.hero-index,.role-date,.timeline-date,.impact-card-head,.contact-email,.site-footer>span,.site-footer>a:last-child{font-size:9px}.header-resume,.header-contact,.main-nav a,.button{font-size:10px}.contact-email{letter-spacing:.7px}}
+.impact-card-integration .integration-graphic{flex-wrap:wrap;gap:8px}
+.impact-card-integration .integration-graphic b{display:none}
