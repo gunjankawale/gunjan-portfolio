@@ -1,6 +1,6 @@
 # Gunjan Kawale — Portfolio
 
-Portfolio for Gunjan Kawale, Azure Data Engineer. The site is built with plain HTML, CSS, and JavaScript and has no package installation or build step. The design centers on a data-workflow diagram and a direct, scrollable overview of experience, outcomes, skills, and background.
+Portfolio for Gunjan Kawale, Data Engineer. The site is built with plain HTML, CSS, and JavaScript and has no package installation or build step. It presents SQL, ETL, data warehousing, workflow migration, selected workflow examples, skills, and education from the current résumé.
 
 ## Preview locally
 
@@ -11,8 +11,8 @@ Open `index.html` in a browser. Use the navigation to move between experience, s
 - `index.html` — portfolio content and workflow illustration
 - `styles.css` — responsive visual design and motion
 - `script.js` — reading progress, current-section navigation, and reveal behavior
-- `Gunjan_Kawale_Resume.pdf` — downloadable résumé (public copy with mobile number removed)
-- `build_resume.py` — ReportLab source used to create the résumé PDF
+- `Gunjan_Kawale_Resume.pdf` — downloadable résumé with the phone number removed
+- `build_resume.py` — removes the phone number from the local editable DOCX and exports the matching PDF; the DOCX is not included in the public repository
 
 ## Deploy with GitHub Pages
 
