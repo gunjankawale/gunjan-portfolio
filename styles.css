@@ -1410,6 +1410,90 @@ svg {
   }
 }
 
+/* Step-by-step workflow walkthroughs */
+.walkthrough-section { background: #f5f5ee; }
+.walkthrough-list { display: grid; gap: clamp(24px, 4vw, 48px); }
+.walkthrough-card { overflow: hidden; border: 1px solid rgba(22, 47, 39, .14); border-radius: 22px; background: #fffefa; box-shadow: 0 18px 55px rgba(16, 34, 30, .07); }
+.walkthrough-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: clamp(20px, 3vw, 34px) clamp(20px, 3vw, 38px) 20px; }
+.walkthrough-card-header h3 { margin: 0 0 10px; color: #10221e; font: 700 clamp(21px, 2.5vw, 30px)/1.16 Manrope, sans-serif; }
+.walkthrough-card-header p:not(.section-label) { max-width: 720px; margin: 0; color: #5d6d64; font-size: 15px; line-height: 1.65; }
+.walkthrough-card-header .section-label { margin: 0 0 10px; }
+.walkthrough-duration { flex: 0 0 auto; padding: 8px 11px; border: 1px solid #dfe5d8; border-radius: 999px; color: #526b3a; font: 500 10px/1 'DM Mono', monospace; letter-spacing: .08em; }
+.walkthrough-case-link { display: inline-block; margin-top: 12px; color: #49692e; font-weight: 700; font-size: 13px; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.walkthrough-diagram-wrap { margin: 0 clamp(12px, 2vw, 24px); overflow: hidden; border: 1px solid rgba(230, 238, 222, .18); border-radius: 16px; background: #10221e; }
+.walkthrough-static img { display: block; width: 100%; height: auto; }
+.walkthrough-svg { display: block; width: 100%; height: auto; min-height: 230px; }
+.flow-bg { fill: #10221e; }
+.flow-lane { fill: #19352d; stroke: #769187; stroke-opacity: .4; stroke-width: 1.5; }
+.flow-lane-label { fill: #d2f36b; font: 600 11px 'DM Mono', monospace; letter-spacing: .12em; }
+.flow-edge { fill: none; stroke: #6d887d; stroke-width: 3; marker-end: url(#flow-arrow); transition: stroke .35s, stroke-width .35s, opacity .35s; }
+.flow-edge.is-complete { stroke: #d2f36b; }
+.flow-edge.is-active { stroke: #e3ff78; stroke-width: 5; filter: drop-shadow(0 0 4px rgba(210,243,107,.55)); }
+.flow-node rect { fill: #f6f7ef; stroke: #b9c8b9; stroke-width: 1.5; transition: fill .3s, stroke .3s, transform .3s; }
+.flow-node.is-active rect { fill: #e9f5cd; stroke: #d2f36b; stroke-width: 3; }
+.flow-node.is-complete rect { stroke: #d2f36b; }
+.flow-node-title { fill: #10221e; font: 700 15px Manrope, sans-serif; }
+.flow-node-system { fill: #52685c; font: 10px 'DM Mono', monospace; letter-spacing: .035em; }
+.flow-node-icon { fill: #6b8837; font: 700 12px 'DM Mono', monospace; }
+.flow-token { fill: #d2f36b; stroke: #10221e; stroke-width: 2; filter: drop-shadow(0 0 5px rgba(210,243,107,.6)); }
+.flow-token-label { fill: #10221e; font: 700 7px 'DM Mono', monospace; text-anchor: middle; dominant-baseline: central; }
+.flow-token { transition: cx .8s ease, cy .8s ease; }
+.flow-token-label { transition: x .8s ease, y .8s ease; }
+.flow-note { fill: #c3d1c7; font: 11px 'DM Mono', monospace; letter-spacing: .03em; }
+.walkthrough-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 16px clamp(20px, 3vw, 38px) 10px; }
+.walkthrough-controls button, .branch-controls button { min-height: 38px; padding: 0 13px; border: 1px solid #cbd5c9; border-radius: 9px; background: #fffefa; color: #20352c; font: 600 12px Manrope, sans-serif; cursor: pointer; }
+.walkthrough-controls button:hover:not(:disabled), .branch-controls button:hover { border-color: #708b49; background: #f0f5e6; }
+.walkthrough-controls button:focus-visible, .branch-controls button:focus-visible, .walkthrough-all-steps summary:focus-visible { outline: 3px solid #87a642; outline-offset: 2px; }
+.walkthrough-controls button:disabled { opacity: .48; cursor: not-allowed; }
+.walkthrough-controls [data-walkthrough-start], .walkthrough-controls [data-walkthrough-play] { border-color: #263d33; background: #19352d; color: #f7f8ef; }
+.walkthrough-status { flex: 1 1 210px; color: #617268; font-size: 12px; }
+.walkthrough-progress { display: flex; align-items: center; gap: 14px; padding: 4px clamp(20px, 3vw, 38px) 16px; color: #5d6d64; font: 11px 'DM Mono', monospace; }
+.walkthrough-progress progress { width: min(280px, 55%); height: 7px; border: 0; border-radius: 99px; accent-color: #607d38; }
+.walkthrough-progress progress::-webkit-progress-bar { border-radius: 99px; background: #e7eae0; }
+.walkthrough-progress progress::-webkit-progress-value { border-radius: 99px; background: #718d40; }
+.walkthrough-progress progress::-moz-progress-bar { border-radius: 99px; background: #718d40; }
+.walkthrough-explanation { margin: 0 clamp(20px, 3vw, 38px); padding: 22px 24px; border-left: 3px solid #9ebc60; background: #f3f5ed; }
+.walkthrough-explanation .step-scene { margin: 0 0 8px; color: #67823c; font: 600 10px 'DM Mono', monospace; letter-spacing: .1em; }
+.walkthrough-explanation h4 { margin: 0 0 8px; color: #142a22; font: 700 21px/1.3 Manrope, sans-serif; }
+.walkthrough-explanation > p:not(.step-scene) { max-width: 850px; margin: 0; color: #52645a; font-size: 14px; line-height: 1.65; }
+.walkthrough-explanation dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin: 18px 0 0; }
+.walkthrough-explanation dl div { min-width: 0; }
+.walkthrough-explanation dt { margin-bottom: 5px; color: #6d873c; font: 600 10px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .08em; }
+.walkthrough-explanation dd { margin: 0; color: #344a3d; font-size: 12px; line-height: 1.55; }
+.walkthrough-all-steps { margin: 0 clamp(20px, 3vw, 38px) 24px; padding-top: 13px; }
+.walkthrough-all-steps summary { width: fit-content; color: #49692e; font-size: 13px; font-weight: 700; cursor: pointer; }
+.walkthrough-all-steps ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 24px; padding-left: 22px; color: #52645a; font-size: 12px; line-height: 1.55; }
+.walkthrough-all-steps li::marker { color: #708b49; font-family: 'DM Mono', monospace; }
+.branch-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 0 clamp(20px, 3vw, 38px) 14px; }
+.branch-controls > span { margin-right: 5px; color: #475c4e; font: 600 11px 'DM Mono', monospace; text-transform: uppercase; }
+.branch-controls button { min-height: 31px; padding: 0 14px; }
+.branch-controls button[aria-pressed="true"][data-branch="pass"] { border-color: #587f3f; background: #e8f1dd; color: #28491f; }
+.branch-controls button[aria-pressed="true"][data-branch="fail"] { border-color: #a45f4b; background: #f8e8e1; color: #67372b; }
+.branch-controls small { flex-basis: 100%; color: #69776d; font-size: 11px; }
+@media (max-width: 680px) {
+  .walkthrough-section { padding-top: 62px; padding-bottom: 62px; }
+  .walkthrough-card { border-radius: 16px; }
+  .walkthrough-card-header { gap: 10px; padding: 20px 16px 16px; }
+  .walkthrough-card-header h3 { font-size: 20px; }
+  .walkthrough-card-header p:not(.section-label) { font-size: 13px; }
+  .walkthrough-duration { font-size: 8px; }
+  .walkthrough-diagram-wrap { margin: 0 8px; border-radius: 10px; }
+  .walkthrough-svg { min-height: 170px; }
+  .walkthrough-controls { gap: 6px; padding: 13px 14px 8px; }
+  .walkthrough-controls button { min-height: 40px; padding: 0 9px; font-size: 11px; }
+  .walkthrough-status { flex-basis: 100%; padding-top: 3px; }
+  .walkthrough-progress { padding: 4px 14px 14px; }
+  .walkthrough-explanation { margin: 0 14px; padding: 17px; }
+  .walkthrough-explanation h4 { font-size: 18px; }
+  .walkthrough-explanation dl { grid-template-columns: 1fr; gap: 10px; margin-top: 14px; }
+  .walkthrough-all-steps { margin: 0 14px 18px; }
+  .walkthrough-all-steps ol { grid-template-columns: 1fr; }
+  .branch-controls { padding: 0 14px 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flow-edge, .flow-node rect, .flow-token, .flow-token-label { transition: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

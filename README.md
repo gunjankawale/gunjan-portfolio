@@ -6,6 +6,7 @@ A static engineering portfolio built with HTML, CSS, JavaScript and local SVGs. 
 
 - **Home** — concise introduction, animated system map, professional profile links and résumé PDF.
 - **Workflow Architecture & Reliability** — two separate diagrams: Redpoint migration and output reconciliation, then the shared Logic Apps Try/Catch wrapper and dashboard status tracking. It is an overview, not a numbered case study.
+- **Interactive Workflow Engineering** — four data-driven walkthroughs: the architecture and reliability overview plus the three case studies. Each provides step narration, input/action/output details, progress, previous/next controls, playback and a full-step overview; the API workflow has distinct business PASS and FAIL paths.
 - **Case Study 1 — API-Driven Reporting** — one migrated Logic Apps workflow calling a Function App API; Function App report generation and Blob storage are distinct from Logic Apps status evaluation and downstream orchestration.
 - **Case Study 2 — New CSV Processing** — a workflow built from scratch for a fresh requirement, applying SQL stored procedures and producing TXT output.
 - **Case Study 3 — Database-Driven File Routing** — routing locations and email recipients are read from database configuration for TXT/PDF file handling.
@@ -15,7 +16,7 @@ A static engineering portfolio built with HTML, CSS, JavaScript and local SVGs. 
 
 ## Interactive SVG diagrams
 
-The system map and four workflow explanation groups use local SVG, CSS and small JavaScript controls. The architecture group contains separate migration and Try/Catch diagrams so their responsibilities stay clear. Each diagram has Play, Pause and Replay controls, a descriptive SVG title and description, and a static image fallback that remains visible when JavaScript is disabled or the SVG animation is unavailable. Animation starts only after the visitor chooses Play. Reduced-motion preferences are respected; users can still opt into motion with the explicit control.
+The system map and four workflow walkthroughs use local SVG, CSS and small JavaScript controls. The walkthrough diagrams are rendered from structured workflow data and highlight the active node and handoff alongside synchronized step explanations. Each walkthrough has Start, Play, Pause, Previous, Next and Replay controls, a progress indicator, and an expandable full-workflow overview. The API reporting walkthrough separates its business PASS/FAIL paths from shared Azure action-exception handling. Static SVG fallbacks and case-study text remain available without JavaScript. Playback starts only after a visitor chooses a control; reduced-motion preferences remove diagram transitions.
 
 The six desktop diagram families are:
 
@@ -33,7 +34,7 @@ Each has a separate mobile layout: `hero-system-map-mobile.svg`, `case-redpoint-
 - `index.html` — portfolio structure and static explanations.
 - `projects/api-reporting.html`, `projects/csv-processing.html`, `projects/file-routing.html` — detailed case studies.
 - `styles.css` — editorial visual system, responsive layouts, focus states and reduced-motion styles.
-- `script.js` — accessible diagram controls, active section state, reading progress and footer year.
+- `script.js` — SVG diagram renderer and walkthrough controls, active section state, reading progress and footer year.
 - `assets/diagrams/` — six original desktop SVGs and mobile counterparts.
 - `favicon.svg`, `social-preview.svg`, `social-preview.png` — local identity and share-preview assets.
 - `Gunjan_Kawale_Resume.pdf` — public résumé download linked from the site.
@@ -63,7 +64,7 @@ The configured site address is [gunjankawale.github.io/gunjan-portfolio](https:/
 
 - Visit the home page and each case-study route under the repository subpath.
 - Check section navigation, case-study links, résumé downloads, email, GitHub and LinkedIn.
-- Use each diagram's Play, Pause and Replay buttons by keyboard and pointer; check a reduced-motion system preference and a no-JavaScript browser state.
+- Use all four walkthroughs' Start, Play, Pause, Previous, Next, Replay and full-overview controls by keyboard and pointer; check both API business-status paths, a reduced-motion preference and no-JavaScript static fallbacks.
 - Review wide, tablet and narrow layouts, including the static mobile diagram alternatives.
 - Confirm no public workflow trigger, live API call, database connection or paid asset dependency is introduced.
 - Confirm the Pages artifact stages only the intended public files.
