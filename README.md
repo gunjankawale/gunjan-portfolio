@@ -16,7 +16,7 @@ A static engineering portfolio built with HTML, CSS, JavaScript and local SVGs. 
 
 ## Interactive SVG diagrams
 
-The system map and architecture diagrams use local SVG fallbacks. The API Reporting case study includes a simulated, eight-scene GSAP animation rendered with HTML and CSS. Its controls support Start, Play, Pause, Previous, Next, Replay, branch selection and a full workflow view. The simulation never calls a real API or cloud service. It loads a pinned GSAP build from jsDelivr; if that CDN is unavailable or reduced motion is requested, the technical explanation and manual scene navigation remain available without animation.
+The system map and architecture diagrams use local SVG fallbacks. Each case study embeds an HTML/CSS GSAP simulation. API Reporting includes a dynamic payload, execution console and decision pause for PASS/FAIL exploration; CSV Processing shows input archiving, SQL procedures, TXT outputs and notification; File Routing separates migration reconciliation from runtime database-driven routing. Each has Start, Play, Pause, Previous, Next, Replay, progress and a full workflow view. The simulation never calls a real API or cloud service. It loads a pinned GSAP build from jsDelivr; if that CDN is unavailable or reduced motion is requested, the technical explanation and manual scene navigation remain available without animation.
 
 The six desktop diagram families are:
 
@@ -35,15 +35,15 @@ Each has a separate mobile layout: `hero-system-map-mobile.svg`, `case-redpoint-
 - `projects/api-reporting.html`, `projects/csv-processing.html`, `projects/file-routing.html` — detailed case studies.
 - `styles.css` — editorial visual system, responsive layouts, focus states and reduced-motion styles.
 - `script.js` — existing diagram controls, active section state, reading progress and footer year.
-- `api-reporting.js` — the API case-study animation and scene controls.
+- `case-simulations.js` — reusable scene controller for all three workflow case studies.
+- `assets/icons/` — local Lucide-style SVG icons for workflow components and controls.
 - `assets/diagrams/` — six original desktop SVGs and mobile counterparts.
 - `favicon.svg`, `social-preview.svg`, `social-preview.png` — local identity and share-preview assets.
 - `Gunjan_Kawale_Resume.pdf` — public résumé download linked from the site.
-- `Gunjan_Kawale_Resume.docx` — editable local file; it is not included in the Pages artifact. The worktree retains it while Git has a staged untracking change; the public source repository will retain its earlier tracked copy until that change is committed and pushed.
 - `build_resume.py` — résumé-generation helper; not staged for the website.
 - `.github/workflows/deploy.yml` — GitHub Pages deployment workflow.
 
-The PDF document properties include the résumé title and author name. The DOCX core properties include the author and last-modified-by fields. Both were reviewed read-only. The site links only to the PDF; it does not publish or link to the editable DOCX in the Pages artifact.
+The site links only to the PDF résumé; it does not publish or link to the editable DOCX in the Pages artifact.
 
 ## Preview locally
 
@@ -65,7 +65,7 @@ The configured site address is [gunjankawale.github.io/gunjan-portfolio](https:/
 
 - Visit the home page and each case-study route under the repository subpath.
 - Check section navigation, case-study links, résumé downloads, email, GitHub and LinkedIn.
-- Use the API case study's Start, Play, Pause, Previous, Next, Replay and full-workflow controls by keyboard and pointer; check both business-status paths, reduced motion, and fallback behavior when GSAP is unavailable.
+- Use each case study's Start, Play, Pause, Previous, Next, Replay and full-workflow controls by keyboard and pointer; check both API business-status paths, reduced motion, and fallback behavior when GSAP is unavailable.
 - Review wide, tablet and narrow layouts, including the static mobile diagram alternatives.
 - Confirm no public workflow trigger, live API call, database connection or paid asset dependency is introduced.
 - Confirm the Pages artifact stages only the intended public files.
