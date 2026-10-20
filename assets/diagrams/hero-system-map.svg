@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 480" role="img" aria-labelledby="title desc">
+  <title id="title">Data systems and workflow orchestration map</title>
+  <desc id="desc">Customer APIs, SQL Server, and files connect through Azure Logic Apps to Blob Storage, downstream file destinations, and email. The exact route varies by workflow.</desc>
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1b382f"/><stop offset="1" stop-color="#10221e"/></linearGradient>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 8 4.5 0 9Z" fill="#d2f36b"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#07110e" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1100" height="480" rx="24" fill="url(#surface)"/>
+  <path d="M24 56H1076M24 435H1076" stroke="#8ca096" stroke-opacity=".23"/>
+  <text x="42" y="38" fill="#d2f36b" font-family="monospace" font-size="12" letter-spacing="2">SYSTEMS I WORK ACROSS</text>
+  <text x="1058" y="38" fill="#a9b8ae" font-family="monospace" font-size="11" text-anchor="end">CONCEPTUAL MAP · PATHS VARY</text>
+  <text x="55" y="91" fill="#a9b8ae" font-family="monospace" font-size="11" letter-spacing="1.5">SOURCES &amp; FORMATS</text>
+  <text x="830" y="91" fill="#a9b8ae" font-family="monospace" font-size="11" letter-spacing="1.5">DELIVERY &amp; DOWNSTREAM</text>
+
+  <g fill="none" stroke="#d2f36b" stroke-width="2" stroke-opacity=".82" marker-end="url(#arrow)">
+    <path d="M292 145 C348 145 352 188 417 188"/>
+    <path d="M292 240 H417"/>
+    <path d="M292 335 C348 335 352 292 417 292"/>
+    <path d="M681 188 C744 188 748 145 808 145"/>
+    <path d="M681 240 H808"/>
+    <path d="M681 292 C744 292 748 335 808 335"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="54" y="116" width="238" height="58" rx="10" fill="#f4f3ec"/>
+    <rect x="54" y="211" width="238" height="58" rx="10" fill="#f4f3ec"/>
+    <rect x="54" y="306" width="238" height="58" rx="10" fill="#f4f3ec"/>
+    <rect x="417" y="143" width="264" height="194" rx="16" fill="#263f35" stroke="#d2f36b" stroke-width="1.5"/>
+    <rect x="808" y="116" width="238" height="58" rx="10" fill="#f4f3ec"/>
+    <rect x="808" y="211" width="238" height="58" rx="10" fill="#f4f3ec"/>
+    <rect x="808" y="306" width="238" height="58" rx="10" fill="#f4f3ec"/>
+  </g>
+  <g fill="#10221e" font-family="Arial,sans-serif">
+    <text x="76" y="141" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">CONNECTED SYSTEM</text><text x="76" y="160" font-size="16" font-weight="700">Customer APIs</text>
+    <text x="76" y="236" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">DATABASE</text><text x="76" y="255" font-size="16" font-weight="700">SQL Server</text>
+    <text x="76" y="331" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">FILE FORMATS</text><text x="76" y="350" font-size="16" font-weight="700">CSV · TXT · PDF</text>
+    <text x="549" y="192" text-anchor="middle" font-size="11" fill="#d2f36b" font-family="monospace" letter-spacing="1.6">ORCHESTRATION</text><text x="549" y="225" text-anchor="middle" font-size="23" fill="#fcfcf7" font-weight="700">Azure Logic Apps</text>
+    <text x="549" y="256" text-anchor="middle" font-size="12" fill="#c3d0c6">Triggers · conditions · actions</text><text x="549" y="281" text-anchor="middle" font-size="12" fill="#c3d0c6">Process-specific workflow logic</text><text x="549" y="312" text-anchor="middle" font-size="10" fill="#d2f36b" font-family="monospace">DEVELOP · INTEGRATE · VALIDATE</text>
+    <text x="830" y="141" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">CLOUD STORAGE</text><text x="830" y="160" font-size="16" font-weight="700">Azure Blob Storage</text>
+    <text x="830" y="236" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">FILE HANDLING</text><text x="830" y="255" font-size="16" font-weight="700">Downstream destinations</text>
+    <text x="830" y="331" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">NOTIFICATIONS</text><text x="830" y="350" font-size="16" font-weight="700">Email delivery</text>
+  </g>
+  <g fill="#d2f36b"><circle cx="384" cy="188" r="3"/><circle cx="384" cy="240" r="3"/><circle cx="384" cy="292" r="3"/><circle cx="716" cy="188" r="3"/><circle cx="716" cy="240" r="3"/><circle cx="716" cy="292" r="3"/></g>
+  <circle r="7" fill="#d2f36b" stroke="#10221e" stroke-width="3" visibility="hidden"><animateMotion begin="indefinite" dur="5s" repeatCount="indefinite" path="M292 240H417H681H808"/><set attributeName="visibility" to="visible" begin="indefinite"/></circle>
+  <circle r="5" fill="#fcfcf7" stroke="#d2f36b" stroke-width="2" visibility="hidden"><animateMotion begin="indefinite" dur="6s" repeatCount="indefinite" path="M292 335C348 335 352 292 417 292H681C744 292 748 335 808 335"/><set attributeName="visibility" to="visible" begin="indefinite"/></circle>
+  <text x="42" y="462" fill="#a9b8ae" font-family="monospace" font-size="10" letter-spacing="1">ILLUSTRATIVE SYSTEM MAP · INDIVIDUAL WORKFLOWS USE DIFFERENT PATHS</text>
+</svg>

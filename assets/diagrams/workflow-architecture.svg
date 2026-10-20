@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 820" role="img" aria-labelledby="title desc">
+  <title id="title">Shared Logic Apps Try and Catch workflow wrapper</title>
+  <desc id="desc">A shared Azure Logic Apps wrapper starts a workflow, enters a Try scope for workflow-specific actions and status logging, and routes action-level failures to Catch for an email alert and monitoring dashboard failure log. Dashboard workflow statuses include In Progress, Completed, Failed and Skipped. No API status branch is shown.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#19352d"/><stop offset="1" stop-color="#10221e"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#07110e" flood-opacity=".22"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#d2f36b"/></marker>
+  </defs>
+  <rect width="1500" height="820" rx="26" fill="url(#bg)"/>
+  <path d="M42 90H1458M42 764H1458" stroke="#d9e3da" stroke-opacity=".18"/>
+  <text x="56" y="58" fill="#d2f36b" font-family="monospace" font-size="15" letter-spacing="2.2">WORKFLOW ARCHITECTURE &amp; RELIABILITY</text>
+  <text x="1440" y="58" fill="#b6c4bb" font-family="monospace" font-size="12" text-anchor="end">CONCEPTUAL · SANITIZED</text>
+
+  <rect x="62" y="136" width="1376" height="564" rx="24" fill="#18382f" stroke="#86a095" stroke-opacity=".5" stroke-width="2"/>
+  <rect x="87" y="118" width="275" height="38" rx="19" fill="#d2f36b"/>
+  <text x="224" y="143" text-anchor="middle" fill="#10221e" font-family="monospace" font-size="13" font-weight="700" letter-spacing="1.5">SHARED LOGIC APPS WRAPPER</text>
+
+  <g filter="url(#shadow)">
+    <rect x="105" y="338" width="184" height="116" rx="16" fill="#fcfcf7"/>
+    <rect x="350" y="183" width="706" height="418" rx="22" fill="#f2f1e9" stroke="#d2f36b" stroke-width="3"/>
+    <rect x="1090" y="220" width="300" height="338" rx="22" fill="#2a4940" stroke="#d2f36b" stroke-width="2"/>
+    <rect x="1120" y="290" width="240" height="86" rx="14" fill="#fcfcf7"/>
+    <rect x="1120" y="402" width="240" height="104" rx="14" fill="#fcfcf7"/>
+  </g>
+  <text x="197" y="377" text-anchor="middle" fill="#728d3e" font-family="monospace" font-size="11" letter-spacing="1.4">TRIGGER</text>
+  <text x="197" y="411" text-anchor="middle" fill="#10221e" font-family="Arial,sans-serif" font-size="23" font-weight="700">Start run</text>
+  <text x="197" y="435" text-anchor="middle" fill="#5d6d64" font-family="Arial,sans-serif" font-size="14">Schedule or file event</text>
+
+  <text x="386" y="226" fill="#668436" font-family="monospace" font-size="13" letter-spacing="1.7">TRY SCOPE</text>
+  <text x="1020" y="226" text-anchor="end" fill="#617167" font-family="monospace" font-size="11">ACTIONS VARY BY WORKFLOW REQUIREMENT</text>
+  <g fill="#e0e7db" stroke="#bdc9bd" stroke-width="1.5">
+    <rect x="386" y="257" width="194" height="112" rx="14"/><rect x="601" y="257" width="194" height="112" rx="14"/><rect x="816" y="257" width="194" height="112" rx="14"/>
+    <rect x="386" y="394" width="624" height="152" rx="14" fill="#e8eee1"/>
+  </g>
+  <g fill="#10221e" font-family="Arial,sans-serif">
+    <text x="483" y="302" text-anchor="middle" font-size="18" font-weight="700">SQL actions</text><text x="483" y="329" text-anchor="middle" fill="#68776e" font-size="13">when required</text>
+    <text x="698" y="302" text-anchor="middle" font-size="18" font-weight="700">API calls</text><text x="698" y="329" text-anchor="middle" fill="#68776e" font-size="13">when required</text>
+    <text x="913" y="302" text-anchor="middle" font-size="18" font-weight="700">Other actions</text><text x="913" y="329" text-anchor="middle" fill="#68776e" font-size="13">business-specific</text>
+    <text x="411" y="430" fill="#6d873c" font-family="monospace" font-size="11" letter-spacing="1.2">WORKFLOW / STEP STATUS LOGGING</text>
+    <text x="411" y="466" font-size="15" font-weight="700">Record status for relevant actions or steps</text>
+    <text x="411" y="500" fill="#4e6156" font-size="13">In Progress  ·  Completed  ·  Failed  ·  Skipped</text>
+    <text x="411" y="526" fill="#6c7a71" font-size="12">Dashboard values; placement varies with workflow requirements.</text>
+  </g>
+
+  <g fill="none" stroke="#d2f36b" stroke-width="3" marker-end="url(#arrow)"><path d="M289 396H336"/><path d="M1056 338H1080"/><path d="M1056 500H1080"/></g>
+  <text x="1073" y="315" text-anchor="middle" fill="#d2f36b" font-family="monospace" font-size="10">ACTION ERROR</text>
+  <text x="1073" y="526" text-anchor="middle" fill="#d2f36b" font-family="monospace" font-size="10">CATCH PATH</text>
+  <text x="1120" y="258" fill="#d2f36b" font-family="monospace" font-size="13" letter-spacing="1.5">CATCH SCOPE</text>
+  <g fill="#10221e" font-family="Arial,sans-serif">
+    <text x="1142" y="324" font-size="18" font-weight="700">Email alert</text><text x="1142" y="349" fill="#65746b" font-size="12">configured notification</text>
+    <text x="1142" y="443" font-size="17" font-weight="700">Monitoring dashboard</text><text x="1142" y="470" fill="#65746b" font-size="12">log action-level failure</text>
+  </g>
+  <text x="750" y="744" text-anchor="middle" fill="#c2cfc5" font-family="monospace" font-size="12" letter-spacing="1">SHARED FAILURE HANDLING · WORKFLOW-SPECIFIC ACTIONS · NO API RESPONSE BRANCH</text>
+  <circle r="7" fill="#d2f36b" stroke="#10221e" stroke-width="2" visibility="hidden"><animateMotion begin="indefinite" dur="7s" repeatCount="indefinite" path="M289 396H350H1056H1072V338H1090"/><set attributeName="visibility" to="visible" begin="indefinite"/></circle>
+  <circle r="5" fill="#ffbd9b" stroke="#4a3931" stroke-width="2" visibility="hidden"><animateMotion begin="indefinite" dur="6s" repeatCount="indefinite" path="M1010 338H1056H1090"/><set attributeName="visibility" to="visible" begin="indefinite"/></circle>
+</svg>

@@ -1,21 +1,69 @@
-# Gunjan Kawale — Portfolio
+# Gunjan Kawale — Data Engineering Showcase
 
-Portfolio for Gunjan Kawale, Data Engineer. The site is built with plain HTML, CSS, and JavaScript and has no package installation or build step. It presents SQL, ETL, data warehousing, workflow migration, selected workflow examples, skills, and education from the current résumé.
+A static engineering portfolio built with HTML, CSS, JavaScript and local SVGs. It explains workflow architecture and three sanitized professional examples. The pages do not execute Azure workflows, call APIs, access databases or send email. Hosting uses GitHub Pages with no required paid services or build dependencies.
 
-## Preview locally
+## Site structure
 
-Open `index.html` in a browser. Use the navigation to move between experience, selected work, skills, and about sections.
+- **Home** — concise introduction, animated system map, professional profile links and résumé PDF.
+- **Workflow Architecture & Reliability** — two separate diagrams: Redpoint migration and output reconciliation, then the shared Logic Apps Try/Catch wrapper and dashboard status tracking. It is an overview, not a numbered case study.
+- **Case Study 1 — API-Driven Reporting** — one migrated Logic Apps workflow calling a Function App API; Function App report generation and Blob storage are distinct from Logic Apps status evaluation and downstream orchestration.
+- **Case Study 2 — New CSV Processing** — a workflow built from scratch for a fresh requirement, applying SQL stored procedures and producing TXT output.
+- **Case Study 3 — Database-Driven File Routing** — routing locations and email recipients are read from database configuration for TXT/PDF file handling.
+- **Technology Stack** — skills grouped by function and work context.
+- **Background** — compact, verified career chronology and education.
+- **Contact** — professional email, GitHub, LinkedIn and résumé download.
+
+## Interactive SVG diagrams
+
+The system map and four workflow explanation groups use local SVG, CSS and small JavaScript controls. The architecture group contains separate migration and Try/Catch diagrams so their responsibilities stay clear. Each diagram has Play, Pause and Replay controls, a descriptive SVG title and description, and a static image fallback that remains visible when JavaScript is disabled or the SVG animation is unavailable. Animation starts only after the visitor chooses Play. Reduced-motion preferences are respected; users can still opt into motion with the explicit control.
+
+The six desktop diagram families are:
+
+- `hero-system-map.svg` — systems and formats overview.
+- `case-redpoint-migration.svg` — legacy and migrated workflow comparison with output reconciliation.
+- `workflow-architecture.svg` — shared Try/Catch wrapper and workflow-status logging.
+- `api-reporting.svg` — one migrated API report workflow with distinct status branches.
+- `csv-processing.svg` — new CSV-to-TXT process.
+- `file-routing.svg` — database-configured TXT/PDF routing and notification.
+
+Each has a separate mobile layout: `hero-system-map-mobile.svg`, `case-redpoint-migration-mobile.svg`, `architecture-wrapper-mobile.svg`, `api-reporting-mobile.svg`, `csv-processing-mobile.svg` and `file-routing-mobile.svg`. The static fallback and explanatory HTML keep the essential content available without animation. SVG files contain no internal endpoints, customer data, database object names, private paths, credentials or internal report counts.
 
 ## Files
 
-- `index.html` — portfolio content and workflow illustration
-- `styles.css` — responsive visual design and motion
-- `script.js` — reading progress, current-section navigation, and reveal behavior
-- `Gunjan_Kawale_Resume.pdf` — downloadable résumé with the phone number removed
-- `build_resume.py` — removes the phone number from the local editable DOCX and exports the matching PDF; the DOCX is not included in the public repository
+- `index.html` — portfolio structure and static explanations.
+- `projects/api-reporting.html`, `projects/csv-processing.html`, `projects/file-routing.html` — detailed case studies.
+- `styles.css` — editorial visual system, responsive layouts, focus states and reduced-motion styles.
+- `script.js` — accessible diagram controls, active section state, reading progress and footer year.
+- `assets/diagrams/` — six original desktop SVGs and mobile counterparts.
+- `favicon.svg`, `social-preview.svg`, `social-preview.png` — local identity and share-preview assets.
+- `Gunjan_Kawale_Resume.pdf` — public résumé download linked from the site.
+- `Gunjan_Kawale_Resume.docx` — editable local file; it is not included in the Pages artifact. The worktree retains it while Git has a staged untracking change; the public source repository will retain its earlier tracked copy until that change is committed and pushed.
+- `build_resume.py` — résumé-generation helper; not staged for the website.
+- `.github/workflows/deploy.yml` — GitHub Pages deployment workflow.
 
-## Deploy with GitHub Pages
+The PDF document properties include the résumé title and author name. The DOCX core properties include the author and last-modified-by fields. Both were reviewed read-only. The site links only to the PDF; it does not publish or link to the editable DOCX in the Pages artifact.
 
-The `Deploy to GitHub Pages` workflow publishes the static site on each push to `main`. The repository's Pages source is configured as **GitHub Actions**. The site will be available at `https://gunjankawale.github.io/gunjan-portfolio/` after the first successful workflow run.
+## Preview locally
 
-GitHub CLI 2.102.0 is available locally at `.tools/bin/gh` for repository setup. The binary is ignored by Git and is not included in the source history.
+From the repository root:
+
+```sh
+python3 -m http.server 8000
+```
+
+Open [http://localhost:8000](http://localhost:8000). Serving over HTTP allows the browser to load the local SVG files into the animation controls. If JavaScript is disabled, the static diagrams and text remain available.
+
+## GitHub Pages deployment
+
+The `Deploy to GitHub Pages` workflow runs on pushes to `main` or manual dispatch. It copies only the home page, shared CSS/JavaScript, favicon, share image, intended résumé PDF, twelve required SVG files and the three case-study pages into `_site/`, then uploads that folder as the Pages artifact. It does not include the résumé DOCX, build helper, repository files, unused legacy draft pages or video files. No runtime API, database, backend or paid service is required.
+
+The configured site address is [gunjankawale.github.io/gunjan-portfolio](https://gunjankawale.github.io/gunjan-portfolio/). A successful workflow run is required for changes to appear there.
+
+## Review checklist
+
+- Visit the home page and each case-study route under the repository subpath.
+- Check section navigation, case-study links, résumé downloads, email, GitHub and LinkedIn.
+- Use each diagram's Play, Pause and Replay buttons by keyboard and pointer; check a reduced-motion system preference and a no-JavaScript browser state.
+- Review wide, tablet and narrow layouts, including the static mobile diagram alternatives.
+- Confirm no public workflow trigger, live API call, database connection or paid asset dependency is introduced.
+- Confirm the Pages artifact stages only the intended public files.

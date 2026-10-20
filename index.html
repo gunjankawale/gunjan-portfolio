@@ -3,129 +3,127 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#101d1b" />
-  <meta name="description" content="Gunjan Kawale is a data engineer with experience across SQL, ETL, data warehousing, data migration, Redpoint, and Azure Logic Apps workflow development." />
+  <meta name="theme-color" content="#10221e" />
+  <meta name="description" content="Gunjan Kawale, Data Engineer. Technical architecture and case studies in ETL, SQL, Azure Logic Apps, workflow migration and file processing." />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Gunjan Kawale — Data Engineer" />
-  <meta property="og:description" content="SQL, ETL, data warehousing, data migration, Redpoint workflow development, and Azure Logic Apps." />
+  <meta property="og:description" content="A technical showcase of workflow architecture, ETL development, API integration and data processing." />
   <meta property="og:url" content="https://gunjankawale.github.io/gunjan-portfolio/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://gunjankawale.github.io/gunjan-portfolio/social-preview.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Technical system diagram showing data sources and downstream delivery through workflow orchestration." />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Gunjan Kawale — Data Engineer</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261018-content-pass-2" />
+  <link rel="stylesheet" href="styles.css?v=20261020-showcase-v2" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Gunjan Kawale, home"><span>G</span>K<span class="brand-period">.</span></a>
+    <a class="brand" href="#home" aria-label="Gunjan Kawale, home">GK<span>.</span></a>
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="#work">Experience</a>
-      <a href="#impact">Selected work</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#home">Home</a><a href="#architecture">Architecture</a><a href="#case-studies">Case Studies</a><a href="#stack">Technology Stack</a><a href="#background">Background</a><a href="#contact">Contact</a>
     </nav>
-    <div class="header-actions">
-      <a class="header-resume" href="Gunjan_Kawale_Resume.pdf" download>Résumé <span>↓</span></a>
-      <a class="header-contact" href="#contact">Let’s talk <span>↗</span></a>
-    </div>
+    <a class="header-resume" href="Gunjan_Kawale_Resume.pdf" download>Résumé PDF <span aria-hidden="true">↓</span></a>
   </header>
 
   <main id="main-content">
     <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="eyebrow"><span class="status-dot"></span> DATA ENGINEER <span class="eyebrow-divider">/</span> NAGPUR, INDIA</p>
-        <h1 id="hero-title">Data pipelines.<br />Cloud workflows.<br /><span>Built to last.</span></h1>
-        <p class="hero-intro">I’m Gunjan Kawale, a data engineer with experience across SQL, ETL, data warehousing, data migration, and workflow automation. My work includes Redpoint workflow development and migration to Azure Logic Apps, plus production workflow support.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#impact">Explore selected work <span>↓</span></a>
-          <a class="button button-quiet" href="mailto:gunjanworkspace@gmail.com">Get in touch <span>↗</span></a>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> DATA ENGINEER <span class="eyebrow-divider">/</span> NAGPUR, INDIA</p>
+        <h1 id="hero-title">Data workflows.<br />Cloud integration.<br /><em>Reliable processing.</em></h1>
+        <p class="hero-intro">I work across ETL development, workflow migration, SQL, API integration and automated file processing, with professional experience in Redpoint, SSIS and Azure Logic Apps.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#architecture">Explore architecture <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="#case-studies">View case studies <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="Gunjan_Kawale_Resume.pdf" download>Download résumé <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-links" aria-label="Professional profiles"><a href="https://github.com/gunjankawale" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/gunjan-kawale" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <figure class="hero-figure">
+        <div class="motion-unit hero-motion-unit" data-motion-unit>
+          <div class="motion-controls" role="group" aria-label="Hero system map animation controls" hidden><button type="button" data-motion-play>Play</button><button type="button" data-motion-pause disabled>Pause</button><button type="button" data-motion-replay disabled>Replay</button><span data-motion-status aria-live="polite">Static diagram</span></div>
+          <div class="motion-figure">
+            <picture data-motion-fallback><source media="(max-width: 680px)" srcset="assets/diagrams/hero-system-map-mobile.svg" /><img src="assets/diagrams/hero-system-map.svg" alt="Conceptual map of customer APIs, SQL Server, and CSV, TXT and PDF files entering different Logic Apps workflows and continuing to storage, file destinations or email." /></picture>
+            <object class="motion-object" data="assets/diagrams/hero-system-map.svg" data-mobile="assets/diagrams/hero-system-map-mobile.svg" type="image/svg+xml" role="img" aria-label="Animated conceptual map of data sources flowing through workflow orchestration to storage, downstream file destinations and email." hidden><p>Data sources connect through workflow orchestration to storage, file destinations and email.</p></object>
+          </div>
         </div>
-        <div class="hero-links"><a href="https://www.linkedin.com/in/gunjan-kawale" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="https://github.com/gunjankawale" target="_blank" rel="noreferrer">GITHUB ↗</a></div>
-      </div>
+        <figcaption><span>FIG. 01</span> The systems and file formats I work across; individual workflow paths vary.</figcaption>
+      </figure>
+      <div class="hero-footnote"><span>DATA / ORCHESTRATION / DELIVERY</span><span>STATIC ENGINEERING SHOWCASE</span></div>
+    </section>
 
-      <div class="engineering-panel">
-        <div class="panel-topline"><span><i></i> ENGINEERING NOTES</span><span>SQL / ETL</span></div>
-        <div class="panel-file"><span>01</span><strong>pipeline-principles</strong><small>FIELD NOTES</small></div>
-        <div class="code-lines" aria-hidden="true">
-          <div><span>01</span><code><b>LOAD</b> <em>incrementally</em></code></div>
-          <div><span>02</span><code><b>VALIDATE</b> <em>data quality</em></code></div>
-          <div><span>03</span><code><b>RECONCILE</b> <em>datasets</em></code></div>
-          <div><span>04</span><code><b>DOCUMENT</b> <em>workflows</em></code></div>
+    <section class="section architecture-section" id="architecture" aria-labelledby="architecture-title">
+      <div class="section-heading"><div><p class="section-label"><span>OVERVIEW</span> WORKFLOW ARCHITECTURE &amp; RELIABILITY</p><h2 id="architecture-title">A shared wrapper.<br /><em>Workflow-specific work.</em></h2></div><p class="section-summary">A conceptual view of the migration and operational patterns across my work. Individual workflows have their own triggers, actions and business rules.</p></div>
+      <div class="diagram-legend" aria-label="Diagram legend"><span><i class="legend-mark legend-orchestration" aria-hidden="true"></i>Logic Apps orchestration</span><span><i class="legend-mark legend-processing" aria-hidden="true"></i>Separate processing</span><span><i class="legend-mark legend-database" aria-hidden="true"></i>Database configuration</span><span><i class="legend-mark legend-destination" aria-hidden="true"></i>File destination or delivery</span></div>
+      <div class="architecture-motion-grid">
+        <figure class="editorial-diagram motion-unit" data-motion-unit>
+          <div class="diagram-heading"><span>01 / MIGRATION OVERVIEW</span><strong>Preserve logic. Reconcile outputs.</strong></div>
+          <div class="motion-controls" role="group" aria-label="Migration overview animation controls" hidden><button type="button" data-motion-play>Play</button><button type="button" data-motion-pause disabled>Pause</button><button type="button" data-motion-replay disabled>Replay</button><span data-motion-status aria-live="polite">Static diagram</span></div>
+          <div class="motion-figure"><picture data-motion-fallback><source media="(max-width: 680px)" srcset="assets/diagrams/case-redpoint-migration-mobile.svg" /><img src="assets/diagrams/case-redpoint-migration.svg" alt="Aligned legacy Redpoint and Azure Logic Apps workflow stages carry forward the same business logic; their outputs are reconciled and validated." /></picture><object class="motion-object" data="assets/diagrams/case-redpoint-migration.svg" data-mobile="assets/diagrams/case-redpoint-migration-mobile.svg" type="image/svg+xml" role="img" aria-label="Animated comparison of Redpoint and Azure Logic Apps workflow paths showing preserved business rules and output reconciliation." hidden><p>Existing business logic is carried into Logic Apps and outputs are reconciled.</p></object></div>
+          <figcaption><span>FIG. 02</span> Conceptual migration view for approximately 7–8 existing production workflows.</figcaption>
+        </figure>
+        <figure class="editorial-diagram motion-unit" data-motion-unit>
+          <div class="diagram-heading"><span>02 / SHARED FAILURE HANDLING</span><strong>Try actions. Catch errors.</strong></div>
+          <div class="motion-controls" role="group" aria-label="Try and Catch architecture animation controls" hidden><button type="button" data-motion-play>Play</button><button type="button" data-motion-pause disabled>Pause</button><button type="button" data-motion-replay disabled>Replay</button><span data-motion-status aria-live="polite">Static diagram</span></div>
+          <div class="motion-figure"><picture data-motion-fallback><source media="(max-width: 680px)" srcset="assets/diagrams/architecture-wrapper-mobile.svg" /><img src="assets/diagrams/workflow-architecture.svg" alt="Shared Logic Apps wrapper with workflow-specific actions and dashboard status logging in Try; action failures go to Catch for an email alert and dashboard failure log." /></picture><object class="motion-object" data="assets/diagrams/workflow-architecture.svg" data-mobile="assets/diagrams/architecture-wrapper-mobile.svg" type="image/svg+xml" role="img" aria-label="Animated shared Logic Apps Try and Catch wrapper with status tracking, email alert and dashboard failure logging." hidden><p>Actions vary within Try; action errors go to Catch for alerts and failure logging.</p></object></div>
+          <figcaption><span>FIG. 03</span> API response status evaluation is not part of this shared wrapper.</figcaption>
+        </figure>
+      </div>
+      <div class="architecture-notes">
+        <article><span class="note-number">MIGRATION</span><h3>Keep existing business behavior</h3><p>Approximately 7–8 production workflows were migrated from Redpoint to Azure Logic Apps. Existing business logic was preserved and outputs reconciled to check expected behavior. New requirements are developed separately.</p></article>
+        <article><span class="note-number">TRY / CATCH</span><h3>Catch action-level failures</h3><p>Each workflow’s Try scope contains its required actions, which may include SQL or API calls. If an action fails, the shared Catch scope runs its configured alert and dashboard failure logging.</p></article>
+        <article><span class="note-number">STATUS LOGGING</span><h3>Track workflow progress</h3><p>Within Try, configured logging records workflow status for relevant actions or steps. Depending on the workflow, dashboard statuses include In Progress, Completed, Failed or Skipped. Placement varies by requirement.</p></article>
+      </div>
+      <div class="architecture-callout"><span>BOUNDARY</span><p>API response <code>PASS</code>/<code>FAIL</code> evaluation is workflow-specific logic shown only in Case Study 1. It is separate from shared Catch handling for an Azure action failure.</p></div>
+    </section>
+
+    <section class="section cases-section" id="case-studies" aria-labelledby="cases-title">
+      <div class="section-heading"><div><p class="section-label"><span>02</span> CASE STUDIES</p><h2 id="cases-title">Three workflows.<br /><em>Three different jobs.</em></h2></div><p class="section-summary">Sanitized professional examples, with boundaries between workflow orchestration and the systems that process or receive the data.</p></div>
+      <div class="case-index-grid case-index-grid-three">
+        <article class="case-index-card"><div class="case-index-top"><span>01</span><span>MIGRATED WORKFLOW</span></div><h3>API-driven reporting</h3><p>Logic Apps calls a Function App API with a dynamic payload, then coordinates report-file handling, destination transfer and customer email.</p><div class="case-tags"><span>LOGIC APPS</span><span>FUNCTION APP API</span><span>BLOB STORAGE</span></div><a href="projects/api-reporting.html">Explore the workflow <span aria-hidden="true">↗</span></a></article>
+        <article class="case-index-card"><div class="case-index-top"><span>02</span><span>NEW WORKFLOW</span></div><h3>CSV to TXT processing</h3><p>A workflow built for a fresh requirement: trigger on an incoming CSV, apply SQL business rules, create TXT outputs and deliver them onward.</p><div class="case-tags"><span>CSV</span><span>SQL PROCEDURES</span><span>TXT</span></div><a href="projects/csv-processing.html">Explore the workflow <span aria-hidden="true">↗</span></a></article>
+        <article class="case-index-card"><div class="case-index-top"><span>03</span><span>DATABASE-DRIVEN ROUTING</span></div><h3>TXT and PDF delivery</h3><p>Read routing and email configuration from a database, direct files to configured locations and report format counts in a success email.</p><div class="case-tags"><span>DATABASE LOOKUPS</span><span>FILE ROUTING</span><span>EMAIL</span></div><a href="projects/file-routing.html">Explore the workflow <span aria-hidden="true">↗</span></a></article>
+      </div>
+    </section>
+
+    <section class="case-motion-section" aria-label="Interactive workflow explanations">
+      <div class="section-heading motion-studies-heading"><div><p class="section-label"><span>INTERACTIVE</span> WORKFLOW EXPLANATIONS</p><h2>Follow the data<br /><em>through each flow.</em></h2></div><p class="section-summary">Use Play to trace each sanitized sequence. The diagrams stay readable when paused and with motion disabled.</p></div>
+      <div class="case-motion-grid">
+        <article class="case-motion-card motion-unit" data-motion-unit><div class="case-motion-copy"><p class="section-label">MOTION STUDY · 01 / API REPORTING</p><h3>Request. Process. Deliver.</h3><p>Logic Apps calls the API, the Function App creates CSV reports, and Logic Apps evaluates the business status and coordinates delivery.</p><a href="projects/api-reporting.html">Read the case study ↗</a></div><div class="motion-controls" role="group" aria-label="API reporting animation controls" hidden><button type="button" data-motion-play>Play</button><button type="button" data-motion-pause disabled>Pause</button><button type="button" data-motion-replay disabled>Replay</button><span data-motion-status aria-live="polite">Static diagram</span></div><div class="motion-figure"><picture data-motion-fallback><source media="(max-width: 680px)" srcset="assets/diagrams/api-reporting-mobile.svg" /><img src="assets/diagrams/api-reporting.svg" alt="Logic Apps sends a dynamic request to a Function App, evaluates its returned status and coordinates CSV file transfer and customer email." /></picture><object class="motion-object" data="assets/diagrams/api-reporting.svg" data-mobile="assets/diagrams/api-reporting-mobile.svg" type="image/svg+xml" role="img" aria-label="Animated API-driven reporting sequence with separate PASS and FAIL business paths." hidden><p>Logic Apps calls the Function App API and coordinates status evaluation and report delivery.</p></object></div></article>
+        <article class="case-motion-card motion-unit" data-motion-unit><div class="case-motion-copy"><p class="section-label">MOTION STUDY · 02 / NEW CSV WORKFLOW</p><h3>From CSV to TXT.</h3><p>Watch the file arrive, get archived, pass through SQL business rules and continue to downstream delivery and email.</p><a href="projects/csv-processing.html">Read the case study ↗</a></div><div class="motion-controls" role="group" aria-label="CSV processing animation controls" hidden><button type="button" data-motion-play>Play</button><button type="button" data-motion-pause disabled>Pause</button><button type="button" data-motion-replay disabled>Replay</button><span data-motion-status aria-live="polite">Static diagram</span></div><div class="motion-figure"><picture data-motion-fallback><source media="(max-width: 680px)" srcset="assets/diagrams/csv-processing-mobile.svg" /><img src="assets/diagrams/csv-processing.svg" alt="A new workflow archives incoming CSV, applies SQL stored procedures, creates TXT outputs and delivers attachments downstream and by email." /></picture><object class="motion-object" data="assets/diagrams/csv-processing.svg" data-mobile="assets/diagrams/csv-processing-mobile.svg" type="image/svg+xml" role="img" aria-label="Animated new CSV processing workflow from hot-folder trigger through SQL and TXT delivery." hidden><p>The new Logic Apps workflow archives its CSV input, applies SQL rules and generates TXT outputs.</p></object></div></article>
+        <article class="case-motion-card motion-unit" data-motion-unit><div class="case-motion-copy"><p class="section-label">MOTION STUDY · 03 / DATABASE-DRIVEN ROUTING</p><h3>Configuration guides the route.</h3><p>See the database lookup happen before TXT/PDF routing, with both locations and email recipients coming from database configuration.</p><a href="projects/file-routing.html">Read the case study ↗</a></div><div class="motion-controls" role="group" aria-label="File routing animation controls" hidden><button type="button" data-motion-play>Play</button><button type="button" data-motion-pause disabled>Pause</button><button type="button" data-motion-replay disabled>Replay</button><span data-motion-status aria-live="polite">Static diagram</span></div><div class="motion-figure"><picture data-motion-fallback><source media="(max-width: 680px)" srcset="assets/diagrams/file-routing-mobile.svg" /><img src="assets/diagrams/file-routing.svg" alt="Logic Apps reads database routing and email configuration before identifying TXT/PDF files and moving them to configured destinations." /></picture><object class="motion-object" data="assets/diagrams/file-routing.svg" data-mobile="assets/diagrams/file-routing-mobile.svg" type="image/svg+xml" role="img" aria-label="Animated database-driven file routing sequence with configured destinations and recipients." hidden><p>Database values supply the locations and recipients used by the TXT and PDF routing workflow.</p></object></div></article>
+      </div>
+    </section>
+
+    <section class="section stack-section" id="stack" aria-labelledby="stack-title">
+      <div class="section-heading"><div><p class="section-label"><span>03</span> TECHNOLOGY STACK</p><h2 id="stack-title">Tools in their<br /><em>working context.</em></h2></div><p class="section-summary">Technologies grouped by the kinds of work they support. Their use varies across roles and workflows.</p></div>
+      <div class="stack-grid">
+        <article class="stack-card stack-card-current"><span class="stack-context">ETL &amp; DATA WAREHOUSING</span><h3>Redpoint · SSIS</h3><p>ETL development, data integration, workflow maintenance, migration, validation and output reconciliation.</p></article>
+        <article class="stack-card"><span class="stack-context">CLOUD &amp; WORKFLOW AUTOMATION</span><h3>Azure Logic Apps</h3><p>Workflow orchestration, Azure Blob Storage, Function App API integration, monitoring and email automation.</p></article>
+        <article class="stack-card"><span class="stack-context">DATABASES</span><h3>SQL development</h3><p>SQL Server, SQL Server Management Studio, Oracle SQL, stored procedures and query optimization.</p></article>
+        <article class="stack-card"><span class="stack-context">INTEGRATION &amp; FILE PROCESSING</span><h3>APIs · CSV · TXT · PDF</h3><p>API request and response handling, customer API data extraction, file movement, archiving and email attachments.</p></article>
+        <article class="stack-card"><span class="stack-context">DEVELOPMENT &amp; OPERATIONS</span><h3>Workflow quality</h3><p>Git, code reviews, Postman, workflow logging, debugging, error handling and testing.</p></article>
+      </div>
+    </section>
+
+    <section class="background-section" id="background" aria-labelledby="background-title">
+      <div class="section background-inner"><div class="section-heading"><div><p class="section-label"><span>04</span> BACKGROUND</p><h2 id="background-title">A compact<br /><em>career map.</em></h2></div><p class="section-summary">From SQL data warehousing and ETL development to cloud workflow modernization.</p></div>
+        <div class="career-list">
+          <article class="career-row"><span class="career-date">JUN 2026 — PRESENT</span><div><h3>Data Engineer</h3><p>OneData Software Solutions · Client: DFIN</p><small>Azure Logic Apps workflow development and Redpoint migration</small></div><a href="#architecture" aria-label="See workflow architecture">ARCHITECTURE ↗</a></article>
+          <article class="career-row"><span class="career-date">JAN 2025 — MAR 2026</span><div><h3>Data Engineer</h3><p>Helson Software Solutions Pvt. Ltd.</p><small>SQL development and optimization, ETL and data warehouse operations, migration focused on data consistency and accuracy</small></div><span class="career-context">DATA ENGINEERING</span></article>
+          <article class="career-row"><span class="career-date">JAN 2023 — DEC 2024</span><div><h3>ETL Developer</h3><p>OneData Software Solutions · Client: DFIN</p><small>Redpoint workflow development, maintenance and SQL queries</small></div><a href="#stack">REDPOINT CONTEXT ↗</a></article>
+          <article class="career-row"><span class="career-date">MAY 2021 — NOV 2022</span><div><h3>Associate — SQL DWH Development</h3><p>Think Analytics India Pvt. Ltd. (Think360)</p><small>SQL Server, SSIS and ETL; query optimization and data integration for client solutions including ICICI Bank</small></div><span class="career-context">DATA WAREHOUSING</span></article>
         </div>
-        <div class="panel-tags"><span>SQL</span><span>ETL</span><span>DATA QUALITY</span><span>AZURE</span></div>
-        <div class="panel-bottom"><span>ENGINEERING FOCUS</span><span>01 — 04</span></div>
-      </div>
-
-      <div class="hero-index"><span>01</span><span class="index-line"></span><span>ENGINEERING WITH IMPACT</span></div>
-    </section>
-
-    <section class="section experience-section" id="work">
-      <div class="section-heading">
-        <div><p class="section-label"><span>01</span> EXPERIENCE</p><h2>Building things<br /><em>that hold up.</em></h2></div>
-        <p class="section-summary">Experience across Redpoint workflow migration, SQL development, ETL, data warehousing, and data integration.</p>
-      </div>
-      <article class="current-role">
-        <div class="role-top"><span class="role-badge">CURRENT ROLE</span><span class="role-date">JUN 2026 — PRESENT</span></div>
-        <div class="current-role-grid">
-          <div><p class="company">DATA ENGINEER <span>/</span> ONEDATA SOFTWARE SOLUTIONS</p><h3>Reliable automation<br />for recurring work.</h3></div>
-          <div class="role-description"><p>I contribute to migrating and operating recurring business workflows on an Azure-based automation platform. The broader team work spans orchestration, monitoring, issue investigation, validating outcomes, environment configuration, deployments, and operational notifications. The examples below are migrated workflows within this wider operational role.</p><div class="tag-row"><span>AZURE WORKFLOWS</span><span>MIGRATION</span><span>OPERATIONS</span></div></div>
-        </div>
-        <div class="role-flow"><span>REDPOINT</span><div class="role-flow-line"><i></i><b>→</b></div><span>AZURE</span><small>MIGRATE · REBUILD · DOCUMENT</small></div>
-      </article>
-      <div class="timeline-title"><span>PREVIOUS EXPERIENCE</span><span>2021 — 2026</span></div>
-      <div class="timeline">
-        <article class="timeline-item"><div class="timeline-date">JAN 2025 — MAR 2026</div><div class="timeline-role"><h3>Data Engineer</h3><p>Helson Software Solutions Pvt. Ltd.</p></div><p class="timeline-detail">Developed and optimized SQL queries; contributed to ETL, data integration, and data warehouse operations; supported migrations with a focus on consistency and accuracy.</p></article>
-        <article class="timeline-item"><div class="timeline-date">JAN 2023 — DEC 2024</div><div class="timeline-role"><h3>ETL Developer</h3><p>OneData Software Solutions</p></div><p class="timeline-detail">Built, enhanced, and maintained Redpoint ETL workflows; troubleshot workflow issues and tested results against requirements.</p></article>
-        <article class="timeline-item"><div class="timeline-date">MAY 2021 — NOV 2022</div><div class="timeline-role"><h3>Associate — SQL DWH Development</h3><p>Think Analytics India Pvt. Ltd. <span>· Think360</span></p></div><p class="timeline-detail">Designed SQL Server and SSIS data integration solutions, optimized queries, and supported pipeline automation, data consistency, and security. Contributed to client solutions including ICICI Bank.</p></article>
+        <div class="education-strip"><p class="supporting-label">EDUCATION</p><div><strong>Diploma in Advanced Computing</strong><span>C-DAC Sunbeam Institute of Information Technology, Pune · Apr 2021</span></div><div><strong>B.E. Computer Science Engineering</strong><span>Priyadarshini Institute of Engineering &amp; Technology, Nagpur · RTM Nagpur University · 2019</span></div></div>
       </div>
     </section>
 
-    <section class="impact-section" id="impact">
-      <div class="section impact-inner">
-        <div class="section-heading impact-heading">
-          <div><p class="section-label"><span>02</span> SELECTED WORK</p><h2>Workflow migration.<br /><em>Operational support.</em></h2></div>
-          <p class="section-summary">The examples below are migrated workflows and illustrate parts of a broader automation and operations role.</p>
-        </div>
-        <div class="impact-grid">
-          <article class="impact-card impact-card-wide"><div class="impact-card-head"><span>WORKSTREAM / WORKFLOW MIGRATION</span><span>REDPOINT · AZURE · CURRENT ROLE</span></div><div class="case-title-row"><span class="case-index">01</span><h3>Existing workflows rebuilt for Azure.</h3></div><p>Migrated existing workflows to Azure Logic Apps, rebuilding their logic and validating expected outcomes to preserve established business processes.</p><div class="case-stack"><span>WORKFLOW MIGRATION</span><span>PROCESS VALIDATION</span><span>OPERATIONAL CONTINUITY</span></div></article>
-          <article class="impact-card impact-card-migration"><div class="impact-card-head"><span>MIGRATED WORKFLOW EXAMPLE 01</span><span>FILE PROCESSING</span></div><div class="integration-graphic" aria-hidden="true"><i>INPUT</i><b>→</b><i>PROCESS</i><b>→</b><i>OUTPUT</i></div><h3>Recurring file workflow.</h3><p>One migrated workflow automates a recurring file process, validates expected results, and produces the required outputs for the next business step.</p><div class="case-stack"><span>WORKFLOW ORCHESTRATION</span><span>OUTCOME VALIDATION</span><span>FILE MOVEMENT</span></div></article>
-          <article class="impact-card impact-card-integration"><div class="impact-card-head"><span>MIGRATED WORKFLOW EXAMPLE 02</span><span>MONITORING &amp; SUPPORT</span></div><div class="integration-graphic" aria-hidden="true"><i>RUN</i><i>TRACK</i><i>ALERT</i><i>REVIEW</i></div><h3>Operational visibility.</h3><p>Another migrated workflow example combines process orchestration with run tracking, failure visibility, notifications, and support for issue investigation.</p><div class="case-stack"><span>RUN HEALTH</span><span>FAILURE VISIBILITY</span><span>OPERATIONS SUPPORT</span></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section skills-section" id="skills">
-      <div class="section-heading">
-        <div><p class="section-label"><span>03</span> TOOLKIT</p><h2>Practical tools.<br /><em>Dependable data.</em></h2></div>
-        <p class="section-summary">Tools and practices used across data integration, workflow automation, and SQL development.</p>
-      </div>
-      <div class="skills-grid">
-        <article class="skill-tile"><span class="skill-number">01</span><div class="skill-symbol">⌘</div><h3>ETL &amp; data warehousing</h3><p>Redpoint, SSIS, ETL pipelines, data warehousing and integration, migration, validation, and output reconciliation.</p><div class="tag-row"><span>REDPOINT</span><span>SSIS</span><span>DATA WAREHOUSING</span></div></article>
-        <article class="skill-tile"><span class="skill-number">02</span><div class="skill-symbol">↗</div><h3>Cloud &amp; automation</h3><p>Azure Logic Apps workflows using Azure Blob Storage and integrations that call Azure Function App APIs.</p><div class="tag-row"><span>AZURE LOGIC APPS</span><span>BLOB STORAGE</span><span>API INTEGRATION</span></div></article>
-        <article class="skill-tile"><span class="skill-number">03</span><div class="skill-symbol">◎</div><h3>SQL &amp; file processing</h3><p>SQL queries, stored procedures, query optimization, and CSV/TXT file processing.</p><div class="tag-row"><span>SQL SERVER</span><span>SQL PROCEDURES</span><span>CSV / TXT</span></div></article>
-        <article class="skill-tile"><span class="skill-number">04</span><div class="skill-symbol">✳</div><h3>Operations &amp; tools</h3><p>Debugging, workflow logging, error handling, testing, Git, code reviews, Postman, and log-tracking dashboards.</p><div class="tag-row"><span>GIT</span><span>POSTMAN</span><span>TESTING</span></div></article>
-      </div>
-      <div class="tool-stack"><span class="tool-stack-label">TOOLS &amp; FORMATS</span><span>SQL SERVER</span><span>ORACLE SQL</span><span>SSIS</span><span>AZURE LOGIC APPS</span><span>AZURE BLOB STORAGE</span><span>REDPOINT</span><span>GIT</span><span>POSTMAN</span><span>CSV / TXT</span></div>
-    </section>
-
-    <section class="about-section" id="about">
-      <div class="about-art" aria-hidden="true"><div class="about-orbit orbit-a"></div><div class="about-orbit orbit-b"></div><div class="about-monogram">GK<span>.</span></div><div class="about-caption">DATA / SYSTEMS / PEOPLE</div></div>
-      <div class="about-copy"><p class="section-label"><span>04</span> ABOUT &amp; EDUCATION</p><h2>Education &amp;<br /><em>background.</em></h2><p>Data Engineer based in Nagpur, Maharashtra, India.</p><div class="education-block"><span>EDUCATION</span><div><strong>Diploma in Advanced Computing (DAC)</strong><small>C-DAC Sunbeam Institute of Information Technology, Pune · Apr 2021</small></div><div><strong>B.E. in Computer Science Engineering</strong><small>Priyadarshini Institute of Engineering &amp; Technology, Nagpur · RTM Nagpur University · 2019</small></div></div></div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div class="contact-grid" aria-hidden="true"></div>
-      <div class="contact-inner"><p class="section-label"><span>05</span> LET’S CONNECT</p><h2>Have a data challenge?<br /><em>Let’s make it make sense.</em></h2><p>If you’re building, migrating, or improving data workflows, I’d be glad to connect.</p><div class="contact-actions"><a class="button button-primary" href="mailto:gunjanworkspace@gmail.com">Start a conversation <span>↗</span></a><a href="https://www.linkedin.com/in/gunjan-kawale" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="https://github.com/gunjankawale" target="_blank" rel="noreferrer">GITHUB ↗</a></div><div class="contact-email">GUNJANWORKSPACE@GMAIL.COM <span>·</span> NAGPUR, MAHARASHTRA, INDIA</div></div>
-    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="section contact-inner"><p class="section-label"><span>05</span> CONTACT</p><h2 id="contact-title">Let’s talk about<br /><em>data systems.</em></h2><p>For conversations about data engineering, ETL, SQL or workflow development:</p><div class="contact-actions"><a class="button button-primary" href="mailto:gunjanworkspace@gmail.com">Email Gunjan <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/gunjan-kawale" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="https://github.com/gunjankawale" target="_blank" rel="noreferrer">GITHUB ↗</a></div><p class="contact-location">NAGPUR, MAHARASHTRA, INDIA</p></div></section>
   </main>
-
-  <footer class="site-footer"><a class="brand" href="#home" aria-label="Back to top">G<span>K</span><span class="brand-period">.</span></a><span>BUILT WITH INTENTION · © 2026 GUNJAN KAWALE</span><a href="Gunjan_Kawale_Resume.pdf" download>DOWNLOAD RÉSUMÉ ↓</a></footer>
+  <footer class="site-footer"><a class="brand" href="#home" aria-label="Back to top">GK<span>.</span></a><span>© <span id="copyright-year">2026</span> GUNJAN KAWALE</span><a href="Gunjan_Kawale_Resume.pdf" download>DOWNLOAD RÉSUMÉ PDF ↓</a></footer>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
-  <script src="script.js?v=20261018-resume-aligned"></script>
+  <script src="script.js?v=20261020-showcase-v2" defer></script>
 </body>
 </html>

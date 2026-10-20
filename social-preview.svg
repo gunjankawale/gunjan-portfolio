@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Gunjan Kawale — Data Engineer</title>
+  <desc id="desc">Data workflows, cloud integration and reliable processing, illustrated with Azure Logic Apps connecting APIs, SQL and files to downstream destinations.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0v32" fill="none" stroke="#19352d" stroke-opacity=".1"/></pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 7 4 0 8Z" fill="#d2f36b"/></marker>
+  </defs>
+  <rect width="1200" height="630" fill="#f2f1e9"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="728" y="0" width="472" height="630" fill="#10221e"/>
+  <text x="72" y="98" fill="#668b2d" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3">DATA ENGINEER · NAGPUR, INDIA</text>
+  <text x="70" y="218" fill="#10221e" font-family="Arial,sans-serif" font-size="65" font-weight="700" letter-spacing="-2">Gunjan Kawale</text>
+  <text x="72" y="302" fill="#10221e" font-family="Arial,sans-serif" font-size="37" font-weight="700">Data workflows.</text>
+  <text x="72" y="352" fill="#10221e" font-family="Arial,sans-serif" font-size="37" font-weight="700">Cloud integration.</text>
+  <text x="72" y="402" fill="#668b2d" font-family="Arial,sans-serif" font-size="37" font-weight="700">Reliable processing.</text>
+  <text x="74" y="494" fill="#53645b" font-family="Arial,sans-serif" font-size="19">REDPOINT · SSIS · SQL · AZURE LOGIC APPS</text>
+  <text x="772" y="82" fill="#d2f36b" font-family="monospace" font-size="14" letter-spacing="2">SYSTEMS MAP</text>
+  <text x="772" y="108" fill="#a9b8ae" font-family="monospace" font-size="10">CONCEPTUAL · PATHS VARY</text>
+  <g fill="#f4f3ec"><rect x="770" y="153" width="150" height="64" rx="8"/><rect x="770" y="250" width="150" height="64" rx="8"/><rect x="770" y="347" width="150" height="64" rx="8"/><rect x="1070" y="176" width="110" height="64" rx="8"/><rect x="1070" y="289" width="110" height="64" rx="8"/><rect x="1070" y="402" width="110" height="64" rx="8"/></g>
+  <g fill="none" stroke="#d2f36b" stroke-width="2" marker-end="url(#arrow)"><path d="M920 185c13 0 13 66 25 66"/><path d="M920 282h25"/><path d="M920 379c13 0 13-66 25-66"/><path d="M1055 251c7 0 7-43 12-43"/><path d="M1055 280h12"/><path d="M1055 310c7 0 7 42 12 42"/></g>
+  <rect x="945" y="226" width="110" height="110" rx="12" fill="#29483d" stroke="#d2f36b"/>
+  <text x="1003" y="270" fill="#d2f36b" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="1">ORCHESTRATE</text>
+  <text x="1003" y="296" fill="#fcfcf7" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700">Logic Apps</text>
+  <text x="845" y="190" fill="#10221e" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700">APIs</text>
+  <text x="845" y="287" fill="#10221e" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700">SQL Server</text>
+  <text x="845" y="384" fill="#10221e" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700">CSV · TXT · PDF</text>
+  <text x="1125" y="201" fill="#10221e" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700">Blob</text><text x="1125" y="219" fill="#10221e" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700">Storage</text>
+  <text x="1125" y="327" fill="#10221e" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700">File</text><text x="1125" y="345" fill="#10221e" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700">delivery</text>
+  <text x="1125" y="441" fill="#10221e" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700">Email</text>
+</svg>

@@ -13,7 +13,11 @@ from docx import Document
 ROOT = Path(__file__).resolve().parent
 DOCX_PATH = ROOT / "Gunjan_Kawale_Resume.docx"
 PDF_PATH = ROOT / "Gunjan_Kawale_Resume.pdf"
-SOFFICE = "/Users/gunjankawale/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice"
+SOFFICE = (
+    os.environ.get("SOFFICE_BIN")
+    or shutil.which("soffice")
+    or str(Path.home() / ".cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice")
+)
 PHONE = re.compile(r"(?<!\d)(?:\+?91[ -]?)?\d{10}(?!\d)")
 
 
