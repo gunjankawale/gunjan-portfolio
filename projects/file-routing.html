@@ -2,24 +2,96 @@
 <html lang="en"><head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="A database-driven Logic Apps workflow for routing TXT and PDF files, archiving, and dynamic success email." />
-  <title>Database-Driven File Routing — Gunjan Kawale</title><link rel="icon" type="image/svg+xml" href="../favicon.svg" /><link rel="stylesheet" href="../styles.css?v=20261020-sims-v1" />
+  <title>Database-Driven File Routing — Gunjan Kawale</title><link rel="icon" type="image/svg+xml" href="../favicon.svg" /><link rel="stylesheet" href="../styles.css?v=20261020-azure-cards-v3" />
 </head><body class="case-detail-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header"><a class="brand" href="../index.html#home" aria-label="Gunjan Kawale, home">GK<span>.</span></a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#home">Home</a><a href="../index.html#architecture">Architecture</a><a href="../index.html#case-studies">Case Studies</a><a href="../index.html#stack">Technology Stack</a><a href="../index.html#background">Background</a><a href="../index.html#contact">Contact</a></nav><a class="header-resume" href="../Gunjan_Kawale_Resume.pdf" download>Résumé PDF <span aria-hidden="true">↓</span></a></header>
   <main id="main-content" class="case-detail">
     <a class="back-link" href="../index.html#case-studies">← All case studies</a>
-    <header class="case-detail-heading"><p class="eyebrow">CASE STUDY 03 <span>/</span> PROFESSIONAL EXPERIENCE · MIGRATED WORKFLOW</p><h1>Database-driven<br /><em>file routing.</em></h1><p class="case-lede">A Redpoint workflow migrated to Azure Logic Apps with its existing business logic preserved. At runtime, database configuration supplies routing and email values for relevant TXT and PDF files.</p><div class="case-phase-rails"><div><span>MIGRATION &amp; VALIDATION</span><ol class="case-stage-rail case-stage-rail-compact" aria-label="Migration stages"><li><i>01</i><span>Redpoint</span></li><li><i>02</i><span>Logic Apps</span></li><li><i>03</i><span>Output reconcile</span></li></ol></div><div><span>RUNTIME EXECUTION</span><ol class="case-stage-rail case-stage-rail-compact" aria-label="Runtime stages"><li><i>01</i><span>File trigger</span></li><li><i>02</i><span>SQL configuration</span></li><li><i>03</i><span>Route TXT/PDF</span></li><li><i>04</i><span>Archive</span></li><li><i>05</i><span>Success email</span></li></ol></div></div></header>
-    <section class="workflow-sim" data-workflow-sim="routing" aria-labelledby="routing-sim-title">
-      <header class="workflow-sim-heading"><div><p class="section-label">SIMULATED WORKFLOW · NO LIVE SERVICES</p><h2 id="routing-sim-title">Follow runtime file delivery.</h2><p>This walkthrough covers runtime file processing. Migration and output reconciliation are summarized above.</p></div><span class="simulation-badge"><i aria-hidden="true"></i> INTERACTIVE SIMULATION</span></header>
-      <div class="sim-statusline"><span><i aria-hidden="true"></i> ILLUSTRATIVE RUN</span><span data-sim-status>READY · MANUAL START</span></div>
-      <div class="sim-workspace"><div class="sim-flow-grid" aria-label="Workflow system components"><article class="sim-node" data-sim-system="files"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/file-input.svg" alt="" aria-hidden="true"></span><div><small>RUNTIME INPUT</small><h3>Configured hot folder</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Applicable TXT and PDF files are available for processing.</p><div class="sim-file-stack"><span class="sim-file is-visible" data-sim-file="txt-input"><b>TXT</b><i>Input file</i></span><span class="sim-file is-visible" data-sim-file="pdf-input"><b>PDF</b><i>Input file</i></span></div></article><article class="sim-node" data-sim-system="database"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/database.svg" alt="" aria-hidden="true"></span><div><small>CONFIGURATION</small><h3>SQL database</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Returns configured output, archive and recipient values.</p><details class="sim-config"><summary>Inspect illustrative routing values</summary><dl><div><dt>Output destination</dt><dd>Configured by database</dd></div><div><dt>Archive destination</dt><dd>Configured by database</dd></div><div><dt>Email recipients</dt><dd>Configured by database</dd></div></dl><small>Values are illustrative placeholders.</small></details></article><article class="sim-node" data-sim-system="routes"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/folder-sync.svg" alt="" aria-hidden="true"></span><div><small>FILE ROUTING</small><h3>Output and archive</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Logic Apps uses database-provided locations for applicable files.</p><div class="sim-file-stack"><span class="sim-file" data-sim-file="txt-output"><b>TXT</b><i>Configured output</i></span><span class="sim-file" data-sim-file="pdf-output"><b>PDF</b><i>Configured output</i></span></div><div class="sim-motion-packets"><i data-routing-file-packet>TXT</i><i data-routing-file-packet>PDF</i></div><span class="sim-route-chip" data-routing-output-route>OUTPUT DESTINATION ←</span></article><article class="sim-node" data-sim-system="archive"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/archive.svg" alt="" aria-hidden="true"></span><div><small>ARCHIVE</small><h3>Configured archive</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Logic Apps archives applicable files at the database-specified location.</p><div class="sim-file-stack"><span class="sim-file" data-sim-file="txt-archive"><b>TXT</b><i>Archived file</i></span><span class="sim-file" data-sim-file="pdf-archive"><b>PDF</b><i>Archived file</i></span></div><div class="sim-motion-packets"><i data-routing-archive-packet>TXT</i><i data-routing-archive-packet>PDF</i></div><span class="sim-route-chip" data-routing-archive-route>ARCHIVE DESTINATION ←</span></article><article class="sim-node" data-sim-system="email"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/mail.svg" alt="" aria-hidden="true"></span><div><small>SUCCESS EMAIL</small><h3>Dynamic summary</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Recipients come from configuration; the email includes dynamic format counts.</p><div class="sim-email-card" data-routing-email-preview><span>TO: {RECIPIENTS FROM DATABASE}</span><strong>TXT: {TXT count} · PDF: {PDF count}</strong><small>ILLUSTRATIVE PLACEHOLDERS</small></div></article><article class="sim-node" data-sim-system="monitor"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/activity.svg" alt="" aria-hidden="true"></span><div><small>STATUS</small><h3>Workflow tracking</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Relevant workflow status is logged.</p><span class="sim-state-pill" data-sim-final-status>Awaiting run</span></article></div>
-        <div class="sim-transfer-lane"><span data-sim-lane-label>DATA HANDOFF · ILLUSTRATIVE</span><div class="sim-lane-track" data-sim-lane><i data-sim-packet>FILE</i></div></div>
-        <aside class="sim-console" aria-label="Simulated activity feed"><div class="sim-console-head"><div><span class="sim-small-label">SIMULATED ACTIVITY</span><strong>Execution console</strong></div><span>NO TIMESTAMPS</span></div><ol data-sim-console></ol></aside>
+    <header class="case-detail-heading"><p class="eyebrow">CASE STUDY 03 <span>/</span> PROFESSIONAL EXPERIENCE · MIGRATED WORKFLOW</p><h1>Database-driven<br /><em>file routing.</em></h1><p class="case-lede">A Redpoint workflow migrated to Azure Logic Apps with its existing business logic preserved. At runtime, database configuration supplies routing and email values for relevant TXT and PDF files.</p>
+    <div class="case-phase-rails">
+      <div class="phase-rail-box">
+        <span class="phase-rail-title">01 / MIGRATION &amp; RECONCILIATION</span>
+        <ol class="case-stage-rail case-stage-rail-compact" aria-label="Migration stages">
+          <li><i>01</i><span>Redpoint baseline</span></li>
+          <li><i>02</i><span>Logic Apps transition</span></li>
+          <li><i>03</i><span>Output reconciliation</span></li>
+        </ol>
       </div>
-      <div class="sim-controls" role="group" aria-label="File routing walkthrough controls"><div class="sim-control-buttons"><button type="button" class="sim-start" data-sim-start><img class="control-icon" src="../assets/icons/play.svg" alt="" aria-hidden="true">Start walkthrough</button><button type="button" data-sim-play><img class="control-icon" src="../assets/icons/play.svg" alt="" aria-hidden="true">Play</button><button type="button" data-sim-pause disabled><img class="control-icon" src="../assets/icons/pause.svg" alt="" aria-hidden="true">Pause</button><button type="button" data-sim-previous disabled><img class="control-icon" src="../assets/icons/chevron-left.svg" alt="" aria-hidden="true">Previous</button><button type="button" data-sim-next><img class="control-icon" src="../assets/icons/chevron-right.svg" alt="" aria-hidden="true">Next</button><button type="button" data-sim-replay disabled><img class="control-icon" src="../assets/icons/replay.svg" alt="" aria-hidden="true">Replay</button></div><div class="sim-progress-block"><div><span data-sim-step>Preview · 0 steps</span><span data-sim-clock>0:00</span></div><progress max="6" value="0" data-sim-progress-bar aria-label="Simulation progress"></progress></div></div>
-      <div class="sim-current-step" aria-live="polite"><span data-sim-phase>STATIC PREVIEW</span><h3 data-sim-title>Explore this workflow</h3><p data-sim-description>Start the illustrative sequence or move through it manually. No cloud service is contacted.</p></div>
+      <div class="phase-rail-box">
+        <span class="phase-rail-title">02 / RUNTIME ROUTING EXECUTION</span>
+        <ol class="case-stage-rail case-stage-rail-compact" aria-label="Runtime stages">
+          <li><i>01</i><span>File trigger</span></li>
+          <li><i>02</i><span>SQL configuration</span></li>
+          <li><i>03</i><span>Route TXT/PDF</span></li>
+          <li><i>04</i><span>Archive destination</span></li>
+          <li><i>05</i><span>Success email</span></li>
+        </ol>
+      </div>
+    </div></header>
+
+    <section class="case-reconcile-card" aria-label="Migration reconciliation overview">
+      <div class="reconcile-header">
+        <span class="sim-small-label">ARCHITECTURAL VALIDATION</span>
+        <strong>Preserve Logic · Reconcile Outputs</strong>
+      </div>
+      <div class="reconcile-grid">
+        <div class="reconcile-col">
+          <small>LEGACY STACK</small>
+          <strong>Redpoint Workflow</strong>
+          <p>Established business rules and procedural file processing logic.</p>
+        </div>
+        <div class="reconcile-mid">
+          <span class="reconcile-badge">PRESERVE RULES →</span>
+          <span class="reconcile-check">100% PARITY CHECK</span>
+        </div>
+        <div class="reconcile-col">
+          <small>TARGET CLOUD</small>
+          <strong>Azure Logic Apps</strong>
+          <p>Modern cloud orchestration querying SQL database for dynamic runtime routing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="workflow-sim" data-workflow-sim="routing" aria-labelledby="routing-sim-title">
+      <header class="workflow-sim-heading"><div><p class="section-label">SIMULATED WORKFLOW · NO LIVE SERVICES</p><h2 id="routing-sim-title">Follow runtime file delivery.</h2><p>This walkthrough covers runtime file processing. Migration and output reconciliation are validated prior to execution.</p></div><span class="simulation-badge"><i aria-hidden="true"></i> INTERACTIVE SIMULATION</span></header>
+      
+      <!-- Logic Apps Designer Command Bar with Run Trigger -->
+      <div class="azure-designer-toolbar">
+        <div class="designer-toolbar-left">
+          <button type="button" class="azure-run-btn" data-sim-run aria-label="Run Trigger">
+            <svg class="run-icon" viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true"><polygon points="3,2 14,8 3,14"></polygon></svg>
+            <span>Run</span>
+          </button>
+          <span class="designer-divider" aria-hidden="true"></span>
+          <span class="designer-title"><img src="../assets/icons/azure-logic-apps.svg" alt="" aria-hidden="true" /> db-file-routing-pipeline <small class="designer-env-tag">SQL Config</small></span>
+        </div>
+        <div class="designer-toolbar-right">
+          <span class="designer-tool-btn" data-designer-status><span class="tool-dot tool-dot-run"></span> Ready</span>
+          <span class="designer-tool-btn">🗄 Lookup: SQL DB Rules</span>
+        </div>
+      </div>
+
+      <div class="sim-statusline"><span><i aria-hidden="true"></i> RUN ID: f43d-sim-2026</span><span data-sim-status>READY · PRESS RUN</span></div>
+      <div class="sim-workspace"><div class="sim-flow-grid" aria-label="Workflow system components">
+        <article class="sim-node" data-sim-system="files"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/folder-input.svg" alt="" aria-hidden="true"></span><div><small>RUNTIME INPUT</small><h3>Configured hot folder</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Applicable TXT and PDF files are detected and picked up for processing.</p><div class="sim-file-stack"><span class="sim-file is-visible" data-sim-file="txt-input"><b>TXT</b><i>Input document</i></span><span class="sim-file is-visible" data-sim-file="pdf-input"><b>PDF</b><i>Input document</i></span></div></article>
+
+        <article class="sim-node" data-sim-system="database"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/database.svg" alt="" aria-hidden="true"></span><div><small>CONFIGURATION</small><h3>SQL database</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Logic Apps queries the database for dynamic routing rules, output paths, and recipient lists.</p><details class="sim-config"><summary>Inspect illustrative routing values</summary><dl><div><dt>Output destination</dt><dd>Configured dynamically by database</dd></div><div><dt>Archive destination</dt><dd>Configured dynamically by database</dd></div><div><dt>Email recipients</dt><dd>Configured dynamically by database</dd></div></dl><small>Values are illustrative placeholders.</small></details></article>
+
+        <article class="sim-node" data-sim-system="routes"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/folder-destination.svg" alt="" aria-hidden="true"></span><div><small>FILE ROUTING</small><h3>Output destination</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Logic Apps moves applicable TXT and PDF files to database-provided delivery locations.</p><div class="sim-file-stack"><span class="sim-file" data-sim-file="txt-output"><b>TXT</b><i>Configured output</i></span><span class="sim-file" data-sim-file="pdf-output"><b>PDF</b><i>Configured output</i></span></div><div class="sim-motion-packets"><i data-routing-file-packet>TXT</i><i data-routing-file-packet>PDF</i></div><span class="sim-route-chip" data-routing-output-route>OUTPUT DESTINATION ←</span></article>
+
+        <article class="sim-node" data-sim-system="archive"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/archive.svg" alt="" aria-hidden="true"></span><div><small>ARCHIVE</small><h3>Configured archive</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Logic Apps archives processed files at the database-specified archive destination.</p><div class="sim-file-stack"><span class="sim-file" data-sim-file="txt-archive"><b>TXT</b><i>Archived TXT</i></span><span class="sim-file" data-sim-file="pdf-archive"><b>PDF</b><i>Archived PDF</i></span></div><div class="sim-motion-packets"><i data-routing-archive-packet>TXT</i><i data-routing-archive-packet>PDF</i></div><span class="sim-route-chip sim-route-archive" data-routing-archive-route>ARCHIVE DESTINATION ←</span></article>
+
+        <article class="sim-node" data-sim-system="email"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/mail.svg" alt="" aria-hidden="true"></span><div><small>SUCCESS EMAIL</small><h3>Dynamic summary</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Recipients are queried from configuration; the email reports dynamically counted formats.</p><div class="sim-email-card" data-routing-email-preview><span>TO: {RECIPIENTS FROM DATABASE}</span><strong>TXT: {count} · PDF: {count}</strong><small>DYNAMIC FORMAT COUNTS</small></div></article>
+
+        <article class="sim-node" data-sim-system="monitor"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/activity.svg" alt="" aria-hidden="true"></span><div><small>STATUS</small><h3>Workflow tracking</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Relevant workflow completion status is logged into telemetry.</p><span class="sim-state-pill" data-sim-final-status>Awaiting run</span></article>
+        <div class="sim-transfer-lane"><span data-sim-lane-label>DATA HANDOFF · ILLUSTRATIVE</span><div class="sim-lane-track" data-sim-lane><i data-sim-packet>FILE</i></div></div>
+      </div>
+      <aside class="sim-console" aria-label="Simulated activity feed"><div class="sim-console-head"><div><span class="sim-small-label">SIMULATED ACTIVITY</span><strong>Execution console</strong></div><span>NO TIMESTAMPS</span></div><ol data-sim-console></ol></aside>
+      </div>
+
+      <div class="sim-current-step" aria-live="polite"><span data-sim-phase>STATIC PREVIEW</span><h3 data-sim-title>Explore this workflow</h3><p data-sim-description>Click Run in the Logic Apps toolbar above to trigger the pipeline execution.</p></div>
       <details class="sim-full-workflow"><summary>View walkthrough steps</summary><ol data-sim-outline></ol></details>
-      <noscript><style>.sim-controls{display:none!important}</style><p class="sim-noscript">JavaScript is required for animation controls; the component map and technical notes remain available.</p></noscript>
     </section>
     <details class="sim-static-reference"><summary>Open static architecture reference</summary><figure class="case-diagram"><picture><source media="(max-width: 680px)" srcset="../assets/diagrams/file-routing-mobile.svg" /><img class="case-art" src="../assets/diagrams/file-routing.svg" alt="A Redpoint workflow is migrated to Azure Logic Apps with its routing logic preserved. During runtime, SQL configuration provides locations and recipients for TXT/PDF routing, archiving, and a dynamic success email." /></picture><figcaption><span>FIG. 06</span> Existing logic preserved; runtime values are sourced from database configuration.</figcaption></figure></details>
     <div class="case-detail-grid">
@@ -31,6 +103,6 @@
   </main>
   <footer class="site-footer"><a class="brand" href="../index.html#home" aria-label="Back to portfolio">GK<span>.</span></a><span>© <span id="copyright-year">2026</span> GUNJAN KAWALE</span><a href="../Gunjan_Kawale_Resume.pdf" download>DOWNLOAD RÉSUMÉ PDF ↓</a></footer>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer crossorigin="anonymous"></script>
-  <script src="../case-simulations.js?v=20261020-sims-v2" defer></script>
-  <script src="../script.js?v=20261020-sims-v1" defer></script>
+  <script src="../case-simulations.js?v=20261020-zero-bugs-v9" defer></script>
+  <script src="../script.js?v=20261020-zero-bugs-v8" defer></script>
 </body></html>

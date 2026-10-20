@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261020-sims-v1" />
+  <link rel="stylesheet" href="styles.css?v=20261020-sims-v2" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -92,11 +92,66 @@
     <section class="section stack-section" id="stack" aria-labelledby="stack-title">
       <div class="section-heading"><div><p class="section-label"><span>03</span> TECHNOLOGY STACK</p><h2 id="stack-title">Tools in their<br /><em>working context.</em></h2></div><p class="section-summary">Technologies grouped by the kinds of work they support. Their use varies across roles and workflows.</p></div>
       <div class="stack-grid">
-        <article class="stack-card stack-card-current"><span class="stack-context">ETL &amp; DATA WAREHOUSING</span><h3>Redpoint · SSIS</h3><p>ETL development, data integration, workflow maintenance, migration, validation and output reconciliation.</p></article>
-        <article class="stack-card"><span class="stack-context">CLOUD &amp; WORKFLOW AUTOMATION</span><h3>Azure Logic Apps</h3><p>Workflow orchestration, Azure Blob Storage, Function App API integration, monitoring and email automation.</p></article>
-        <article class="stack-card"><span class="stack-context">DATABASES</span><h3>SQL development</h3><p>SQL Server, SQL Server Management Studio, Oracle SQL, stored procedures and query optimization.</p></article>
-        <article class="stack-card"><span class="stack-context">INTEGRATION &amp; FILE PROCESSING</span><h3>APIs · CSV · TXT · PDF</h3><p>API request and response handling, customer API data extraction, file movement, archiving and email attachments.</p></article>
-        <article class="stack-card"><span class="stack-context">DEVELOPMENT &amp; OPERATIONS</span><h3>Workflow quality</h3><p>Git, code reviews, Postman, workflow logging, debugging, error handling and testing.</p></article>
+        <article class="stack-card stack-card-current">
+          <div class="stack-card-header">
+            <span class="stack-context">ETL &amp; DATA WAREHOUSING</span>
+            <img class="stack-card-icon" src="assets/icons/workflow.svg" alt="" aria-hidden="true" />
+          </div>
+          <h3>Redpoint · SSIS</h3>
+          <p>ETL development, data integration, workflow maintenance, migration, validation and output reconciliation.</p>
+          <div class="stack-card-tags">
+            <span>PRODUCTION MIGRATION</span>
+            <span>PARITY TESTING</span>
+          </div>
+        </article>
+        <article class="stack-card">
+          <div class="stack-card-header">
+            <span class="stack-context">CLOUD &amp; WORKFLOW AUTOMATION</span>
+            <img class="stack-card-icon" src="assets/icons/azure-logic-apps.svg" alt="" aria-hidden="true" />
+          </div>
+          <h3>Azure Logic Apps</h3>
+          <p>Workflow orchestration, Azure Blob Storage, Function App API integration, monitoring and email automation.</p>
+          <div class="stack-card-tags">
+            <span>TRIGGER CONTROL</span>
+            <span>BLOB STAGING</span>
+          </div>
+        </article>
+        <article class="stack-card">
+          <div class="stack-card-header">
+            <span class="stack-context">DATABASES</span>
+            <img class="stack-card-icon" src="assets/icons/database.svg" alt="" aria-hidden="true" />
+          </div>
+          <h3>SQL development</h3>
+          <p>SQL Server, SQL Server Management Studio, Oracle SQL, stored procedures and query optimization.</p>
+          <div class="stack-card-tags">
+            <span>STORED PROCEDURES</span>
+            <span>DYNAMIC LOOKUPS</span>
+          </div>
+        </article>
+        <article class="stack-card">
+          <div class="stack-card-header">
+            <span class="stack-context">INTEGRATION &amp; FILE PROCESSING</span>
+            <img class="stack-card-icon" src="assets/icons/folder-sync.svg" alt="" aria-hidden="true" />
+          </div>
+          <h3>APIs · CSV · TXT · PDF</h3>
+          <p>API request and response handling, customer API data extraction, file movement, archiving and email attachments.</p>
+          <div class="stack-card-tags">
+            <span>PAYLOAD GENERATION</span>
+            <span>ARCHIVING</span>
+          </div>
+        </article>
+        <article class="stack-card">
+          <div class="stack-card-header">
+            <span class="stack-context">DEVELOPMENT &amp; OPERATIONS</span>
+            <img class="stack-card-icon" src="assets/icons/activity.svg" alt="" aria-hidden="true" />
+          </div>
+          <h3>Workflow quality</h3>
+          <p>Git, code reviews, Postman, workflow logging, debugging, error handling and testing.</p>
+          <div class="stack-card-tags">
+            <span>TELEMETRY LOGS</span>
+            <span>TRY / CATCH</span>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -116,6 +171,7 @@
   </main>
   <footer class="site-footer"><a class="brand" href="#home" aria-label="Back to top">GK<span>.</span></a><span>© <span id="copyright-year">2026</span> GUNJAN KAWALE</span><a href="Gunjan_Kawale_Resume.pdf" download>DOWNLOAD RÉSUMÉ PDF ↓</a></footer>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
-  <script src="script.js?v=20261020-gsap-v1" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer crossorigin="anonymous"></script>
+  <script src="script.js?v=20261020-gsap-v2" defer></script>
 </body>
 </html>

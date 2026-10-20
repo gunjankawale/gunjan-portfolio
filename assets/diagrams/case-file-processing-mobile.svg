@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 840" role="img" aria-labelledby="title desc">
+  <title id="title">Mobile file workflow paths for CSV, TXT and PDF</title>
+  <desc id="desc">The upper green path handles a CSV input with Logic Apps and SQL procedures, archives the input and produces TXT files. The separate lower PDF path handles file movement, archiving and email attachments.</desc>
+  <defs><pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0v22" fill="none" stroke="#718c3d" stroke-opacity=".08"/></pattern><marker id="green" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 7 4 0 8Z" fill="#718c3d"/></marker><marker id="rust" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 7 4 0 8Z" fill="#a4573b"/></marker></defs>
+  <rect width="390" height="840" rx="18" fill="#f4f3ec"/><rect width="390" height="840" rx="18" fill="url(#grid)"/>
+  <text x="22" y="34" fill="#6f8f39" font-family="monospace" font-size="10" letter-spacing="1.2">FILES FOLLOW DIFFERENT PATHS</text>
+  <rect x="18" y="58" width="354" height="428" rx="16" fill="#e8eddf"/>
+  <text x="34" y="87" fill="#58722f" font-family="monospace" font-size="10">CSV PROCESS · TXT OUTPUTS</text>
+  <path d="M66 133v291" stroke="#8ca76a" stroke-width="2"/>
+  <g fill="#fcfcf7" stroke="#8ea45e" stroke-width="2"><circle cx="66" cy="145" r="23"/><circle cx="66" cy="239" r="23"/><circle cx="66" cy="333" r="23"/><circle cx="66" cy="427" r="23"/></g>
+  <g fill="none" stroke="#58722f" stroke-width="1.7" stroke-linejoin="round"><path d="M59 132h10l5 5v20H59zM69 132v6h5"/><path d="M55 231h22v16H55zM60 226h12"/><ellipse cx="66" cy="326" rx="8" ry="4"/><path d="M58 326v12c0 5 16 5 16 0v-12"/><path d="M59 414h10l5 5v20H59zM69 414v6h5"/></g>
+  <g fill="#263b30" font-family="Arial,sans-serif"><text x="108" y="141" font-size="10" font-family="monospace" fill="#718c3d">01 / INPUT</text><text x="108" y="163" font-size="16" font-weight="700">CSV file trigger</text><text x="108" y="235" font-size="10" font-family="monospace" fill="#718c3d">02 / RULES</text><text x="108" y="257" font-size="16" font-weight="700">Logic Apps + SQL procedures</text><text x="108" y="329" font-size="10" font-family="monospace" fill="#718c3d">03 / INPUT RETENTION</text><text x="108" y="351" font-size="16" font-weight="700">Archive source CSV</text><text x="108" y="423" font-size="10" font-family="monospace" fill="#718c3d">04 / OUTPUT</text><text x="108" y="445" font-size="16" font-weight="700">Generate TXT files</text></g>
+  <rect x="18" y="510" width="354" height="286" rx="16" fill="#f1e5df"/>
+  <text x="34" y="540" fill="#a4573b" font-family="monospace" font-size="10">SEPARATE PDF WORKFLOWS</text>
+  <path d="M66 590v127" stroke="#c77956" stroke-width="2"/>
+  <g fill="#fffefa" stroke="#c77956" stroke-width="2"><circle cx="66" cy="600" r="23"/><circle cx="66" cy="710" r="23"/></g>
+  <g fill="none" stroke="#a4573b" stroke-width="1.7" stroke-linejoin="round"><path d="M59 587h10l5 5v19H59zM69 587v6h5"/><path d="m55 702 11 9 11-9M55 702v17h22v-17"/></g>
+  <g fill="#402b26" font-family="Arial,sans-serif"><text x="108" y="596" font-size="10" font-family="monospace" fill="#a4573b">FILE</text><text x="108" y="620" font-size="16" font-weight="700">PDF input</text><text x="108" y="703" font-size="10" font-family="monospace" fill="#a4573b">HANDLING</text><text x="108" y="727" font-size="15" font-weight="700">Move / archive / attach to email</text></g>
+  <text x="34" y="770" fill="#725c53" font-family="Arial,sans-serif" font-size="11">No PDF content extraction is implied.</text>
+</svg>

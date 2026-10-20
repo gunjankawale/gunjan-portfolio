@@ -22,13 +22,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Stage static site files
         run: |
           mkdir -p _site/assets/diagrams _site/assets/icons _site/projects
-          cp index.html styles.css script.js case-simulations.js favicon.svg social-preview.png Gunjan_Kawale_Resume.pdf _site/
+          cp index.html styles.css script.js case-simulations.js favicon.svg social-preview.png social-preview.svg Gunjan_Kawale_Resume.pdf _site/
           cp assets/diagrams/hero-system-map.svg assets/diagrams/hero-system-map-mobile.svg assets/diagrams/case-redpoint-migration.svg assets/diagrams/case-redpoint-migration-mobile.svg assets/diagrams/workflow-architecture.svg assets/diagrams/architecture-wrapper-mobile.svg assets/diagrams/api-reporting.svg assets/diagrams/api-reporting-mobile.svg assets/diagrams/csv-processing.svg assets/diagrams/csv-processing-mobile.svg assets/diagrams/file-routing.svg assets/diagrams/file-routing-mobile.svg _site/assets/diagrams/
           cp assets/icons/*.svg _site/assets/icons/
           cp projects/api-reporting.html projects/csv-processing.html projects/file-routing.html _site/projects/

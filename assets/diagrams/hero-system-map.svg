@@ -1,48 +1,181 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 480" role="img" aria-labelledby="title desc">
-  <title id="title">Data systems and workflow orchestration map</title>
-  <desc id="desc">Customer APIs, SQL Server, and files connect through Azure Logic Apps to Blob Storage, downstream file destinations, and email. The exact route varies by workflow.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 480" role="img" aria-labelledby="hero-map-title hero-map-desc">
+  <title id="hero-map-title">Data systems and workflow orchestration map</title>
+  <desc id="hero-map-desc">Customer APIs, SQL Server, and files connect through Azure Logic Apps to Blob Storage, downstream file destinations, and email. The exact route varies by workflow.</desc>
   <defs>
-    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1b382f"/><stop offset="1" stop-color="#10221e"/></linearGradient>
-    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 8 4.5 0 9Z" fill="#d2f36b"/></marker>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#07110e" flood-opacity=".28"/></filter>
+    <linearGradient id="hero-surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#142c25"/>
+      <stop offset="100%" stop-color="#0e1d1a"/>
+    </linearGradient>
+    <linearGradient id="hub-gradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#234237"/>
+      <stop offset="100%" stop-color="#183129"/>
+    </linearGradient>
+    <filter id="hero-card-shadow" x="-10%" y="-15%" width="120%" height="135%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#040b09" flood-opacity=".35"/>
+    </filter>
+    <marker id="hero-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0 8 4.5 0 9Z" fill="#d2f36b"/>
+    </marker>
   </defs>
-  <rect width="1100" height="480" rx="24" fill="url(#surface)"/>
-  <path d="M24 56H1076M24 435H1076" stroke="#8ca096" stroke-opacity=".23"/>
-  <text x="42" y="38" fill="#d2f36b" font-family="monospace" font-size="12" letter-spacing="2">SYSTEMS I WORK ACROSS</text>
-  <text x="1058" y="38" fill="#a9b8ae" font-family="monospace" font-size="11" text-anchor="end">CONCEPTUAL MAP · PATHS VARY</text>
-  <text x="55" y="91" fill="#a9b8ae" font-family="monospace" font-size="11" letter-spacing="1.5">SOURCES &amp; FORMATS</text>
-  <text x="830" y="91" fill="#a9b8ae" font-family="monospace" font-size="11" letter-spacing="1.5">DELIVERY &amp; DOWNSTREAM</text>
 
-  <g fill="none" stroke="#d2f36b" stroke-width="2" stroke-opacity=".82" marker-end="url(#arrow)">
-    <path d="M292 145 C348 145 352 188 417 188"/>
-    <path d="M292 240 H417"/>
-    <path d="M292 335 C348 335 352 292 417 292"/>
-    <path d="M681 188 C744 188 748 145 808 145"/>
-    <path d="M681 240 H808"/>
-    <path d="M681 292 C744 292 748 335 808 335"/>
+  <!-- Background Canvas -->
+  <rect width="1100" height="480" rx="22" fill="url(#hero-surface)" stroke="#2b483e" stroke-width="1.5"/>
+  <path d="M30 54H1070M30 432H1070" stroke="#718c3d" stroke-opacity=".22" stroke-dasharray="2 3"/>
+
+  <!-- Top Metadata Bar -->
+  <g font-family="'DM Mono', monospace" font-size="11">
+    <circle cx="44" cy="34" r="4" fill="#d2f36b"/>
+    <text x="56" y="38" fill="#d2f36b" letter-spacing="2" font-weight="600">SYSTEMS I WORK ACROSS</text>
+    <text x="1056" y="38" fill="#a7b6a5" text-anchor="end" letter-spacing="1">CONCEPTUAL MAP · WORKFLOW PATHS VARY</text>
+    <text x="54" y="86" fill="#a7b6a5" letter-spacing="1.5">01 / SOURCES &amp; FORMATS</text>
+    <text x="550" y="86" fill="#a7b6a5" text-anchor="middle" letter-spacing="1.5">02 / ORCHESTRATION CORE</text>
+    <text x="812" y="86" fill="#a7b6a5" letter-spacing="1.5">03 / DOWNSTREAM &amp; DELIVERY</text>
   </g>
 
-  <g filter="url(#shadow)">
-    <rect x="54" y="116" width="238" height="58" rx="10" fill="#f4f3ec"/>
-    <rect x="54" y="211" width="238" height="58" rx="10" fill="#f4f3ec"/>
-    <rect x="54" y="306" width="238" height="58" rx="10" fill="#f4f3ec"/>
-    <rect x="417" y="143" width="264" height="194" rx="16" fill="#263f35" stroke="#d2f36b" stroke-width="1.5"/>
-    <rect x="808" y="116" width="238" height="58" rx="10" fill="#f4f3ec"/>
-    <rect x="808" y="211" width="238" height="58" rx="10" fill="#f4f3ec"/>
-    <rect x="808" y="306" width="238" height="58" rx="10" fill="#f4f3ec"/>
+  <!-- Connecting Stream Paths -->
+  <g fill="none" stroke="#d2f36b" stroke-width="2" stroke-opacity=".75" marker-end="url(#hero-arrow)" stroke-linecap="round">
+    <path id="path-source-api" d="M300 148 C 360 148, 365 195, 416 195"/>
+    <path id="path-source-sql" d="M300 240 H 416"/>
+    <path id="path-source-files" d="M300 332 C 360 332, 365 285, 416 285"/>
+    <path id="path-out-blob" d="M684 195 C 740 195, 745 148, 804 148"/>
+    <path id="path-out-files" d="M684 240 H 804"/>
+    <path id="path-out-email" d="M684 285 C 740 285, 745 332, 804 332"/>
   </g>
-  <g fill="#10221e" font-family="Arial,sans-serif">
-    <text x="76" y="141" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">CONNECTED SYSTEM</text><text x="76" y="160" font-size="16" font-weight="700">Customer APIs</text>
-    <text x="76" y="236" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">DATABASE</text><text x="76" y="255" font-size="16" font-weight="700">SQL Server</text>
-    <text x="76" y="331" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">FILE FORMATS</text><text x="76" y="350" font-size="16" font-weight="700">CSV · TXT · PDF</text>
-    <text x="549" y="192" text-anchor="middle" font-size="11" fill="#d2f36b" font-family="monospace" letter-spacing="1.6">ORCHESTRATION</text><text x="549" y="225" text-anchor="middle" font-size="23" fill="#fcfcf7" font-weight="700">Azure Logic Apps</text>
-    <text x="549" y="256" text-anchor="middle" font-size="12" fill="#c3d0c6">Triggers · conditions · actions</text><text x="549" y="281" text-anchor="middle" font-size="12" fill="#c3d0c6">Process-specific workflow logic</text><text x="549" y="312" text-anchor="middle" font-size="10" fill="#d2f36b" font-family="monospace">DEVELOP · INTEGRATE · VALIDATE</text>
-    <text x="830" y="141" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">CLOUD STORAGE</text><text x="830" y="160" font-size="16" font-weight="700">Azure Blob Storage</text>
-    <text x="830" y="236" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">FILE HANDLING</text><text x="830" y="255" font-size="16" font-weight="700">Downstream destinations</text>
-    <text x="830" y="331" font-size="10" fill="#718b3b" font-family="monospace" letter-spacing="1">NOTIFICATIONS</text><text x="830" y="350" font-size="16" font-weight="700">Email delivery</text>
+
+  <!-- Connection Nodes on Connectors -->
+  <g fill="#d2f36b">
+    <circle cx="388" cy="195" r="3"/>
+    <circle cx="388" cy="240" r="3"/>
+    <circle cx="388" cy="285" r="3"/>
+    <circle cx="712" cy="195" r="3"/>
+    <circle cx="712" cy="240" r="3"/>
+    <circle cx="712" cy="285" r="3"/>
   </g>
-  <g fill="#d2f36b"><circle cx="384" cy="188" r="3"/><circle cx="384" cy="240" r="3"/><circle cx="384" cy="292" r="3"/><circle cx="716" cy="188" r="3"/><circle cx="716" cy="240" r="3"/><circle cx="716" cy="292" r="3"/></g>
-  <circle r="7" fill="#d2f36b" stroke="#10221e" stroke-width="3" visibility="hidden"><animateMotion begin="indefinite" dur="5s" repeatCount="indefinite" path="M292 240H417H681H808"/><set attributeName="visibility" to="visible" begin="indefinite"/></circle>
-  <circle r="5" fill="#fcfcf7" stroke="#d2f36b" stroke-width="2" visibility="hidden"><animateMotion begin="indefinite" dur="6s" repeatCount="indefinite" path="M292 335C348 335 352 292 417 292H681C744 292 748 335 808 335"/><set attributeName="visibility" to="visible" begin="indefinite"/></circle>
-  <text x="42" y="462" fill="#a9b8ae" font-family="monospace" font-size="10" letter-spacing="1">ILLUSTRATIVE SYSTEM MAP · INDIVIDUAL WORKFLOWS USE DIFFERENT PATHS</text>
+
+  <!-- Left Column: Source Systems -->
+  <g filter="url(#hero-card-shadow)">
+    <!-- Node 1: Customer APIs -->
+    <g class="hero-node" id="hero-node-api">
+      <rect x="52" y="115" width="248" height="66" rx="10" fill="#fcfcf7" stroke="#d2d8ce"/>
+      <rect x="64" y="127" width="42" height="42" rx="7" fill="#19352d"/>
+      <g transform="translate(73, 136)" stroke="#d2f36b" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m5 6-3 4 3 4M15 6l3 4-3 4M12 4l-4 12"/>
+      </g>
+      <text x="116" y="137" fill="#587332" font-family="'DM Mono', monospace" font-size="9" font-weight="600" letter-spacing="1">CONNECTED SYSTEM</text>
+      <text x="116" y="156" fill="#10221e" font-family="'Manrope', sans-serif" font-size="16" font-weight="700">Customer APIs</text>
+      <text x="116" y="171" fill="#66776e" font-family="'DM Sans', sans-serif" font-size="11">Dynamic HTTP extraction</text>
+    </g>
+
+    <!-- Node 2: SQL Server -->
+    <g class="hero-node" id="hero-node-sql">
+      <rect x="52" y="207" width="248" height="66" rx="10" fill="#fcfcf7" stroke="#d2d8ce"/>
+      <rect x="64" y="219" width="42" height="42" rx="7" fill="#19352d"/>
+      <g transform="translate(73, 228)" stroke="#d2f36b" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="10" cy="4" rx="7" ry="2.5"/>
+        <path d="M3 4v8c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V4M3 9c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/>
+      </g>
+      <text x="116" y="229" fill="#587332" font-family="'DM Mono', monospace" font-size="9" font-weight="600" letter-spacing="1">DATABASE</text>
+      <text x="116" y="248" fill="#10221e" font-family="'Manrope', sans-serif" font-size="16" font-weight="700">SQL Server</text>
+      <text x="116" y="263" fill="#66776e" font-family="'DM Sans', sans-serif" font-size="11">Procedures &amp; routing rules</text>
+    </g>
+
+    <!-- Node 3: File Formats -->
+    <g class="hero-node" id="hero-node-files">
+      <rect x="52" y="299" width="248" height="66" rx="10" fill="#fcfcf7" stroke="#d2d8ce"/>
+      <rect x="64" y="311" width="42" height="42" rx="7" fill="#19352d"/>
+      <g transform="translate(73, 320)" stroke="#d2f36b" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2H5a1.8 1.8 0 0 0-1.8 1.8v14.4A1.8 1.8 0 0 0 5 20h10a1.8 1.8 0 0 0 1.8-1.8V7z"/>
+        <polyline points="12 2 12 7 17 7"/>
+        <line x1="7" y1="11" x2="13" y2="11"/>
+        <line x1="7" y1="15" x2="11" y2="15"/>
+      </g>
+      <text x="116" y="321" fill="#587332" font-family="'DM Mono', monospace" font-size="9" font-weight="600" letter-spacing="1">INPUT FILES</text>
+      <text x="116" y="340" fill="#10221e" font-family="'Manrope', sans-serif" font-size="16" font-weight="700">CSV · TXT · PDF</text>
+      <text x="116" y="355" fill="#66776e" font-family="'DM Sans', sans-serif" font-size="11">Configured hot folders</text>
+    </g>
+  </g>
+
+  <!-- Center Hub: Azure Logic Apps Orchestrator -->
+  <g filter="url(#hero-card-shadow)" id="hero-node-orchestrator">
+    <rect x="416" y="140" width="268" height="200" rx="16" fill="url(#hub-gradient)" stroke="#d2f36b" stroke-width="1.8"/>
+    <!-- Azure Logic Apps Icon Emblem -->
+    <rect x="526" y="158" width="48" height="48" rx="12" fill="#10221e" stroke="#718c3d" stroke-width="1.2"/>
+    <g transform="translate(538, 170)" stroke="#d2f36b" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="1" y="1" width="5" height="5" rx="1.2"/>
+      <rect x="18" y="1" width="5" height="5" rx="1.2"/>
+      <rect x="9.5" y="18" width="5" height="5" rx="1.2"/>
+      <path d="M3.5 6v3a2 2 0 0 0 2 2h6.5"/>
+      <path d="M20.5 6v3a2 2 0 0 1-2 2H12"/>
+      <path d="M12 11v7"/>
+    </g>
+    <text x="550" y="226" text-anchor="middle" fill="#d2f36b" font-family="'DM Mono', monospace" font-size="10" font-weight="600" letter-spacing="1.6">ORCHESTRATION ENGINE</text>
+    <text x="550" y="252" text-anchor="middle" fill="#fcfcf7" font-family="'Manrope', sans-serif" font-size="22" font-weight="800">Azure Logic Apps</text>
+    <text x="550" y="278" text-anchor="middle" fill="#d1ded5" font-family="'DM Sans', sans-serif" font-size="12">Triggers · Workflows · Handlers</text>
+    <!-- Pipeline Badge Strip -->
+    <rect x="444" y="296" width="212" height="26" rx="13" fill="#132922" stroke="#375549"/>
+    <text x="550" y="313" text-anchor="middle" fill="#d2f36b" font-family="'DM Mono', monospace" font-size="9" font-weight="600" letter-spacing="1">DEVELOP · INTEGRATE · VALIDATE</text>
+  </g>
+
+  <!-- Right Column: Delivery & Downstream -->
+  <g filter="url(#hero-card-shadow)">
+    <!-- Node 4: Blob Storage -->
+    <g class="hero-node" id="hero-node-blob">
+      <rect x="804" y="115" width="248" height="66" rx="10" fill="#fcfcf7" stroke="#d2d8ce"/>
+      <rect x="816" y="127" width="42" height="42" rx="7" fill="#19352d"/>
+      <g transform="translate(825, 136)" stroke="#d2f36b" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="12" cy="5" rx="8" ry="2.6"/>
+        <path d="M4 5v6c0 1.4 3.6 2.6 8 2.6s8-1.2 8-2.6V5"/>
+        <path d="M4 11v6c0 1.4 3.6 2.6 8 2.6s8-1.2 8-2.6v-6"/>
+      </g>
+      <text x="868" y="137" fill="#587332" font-family="'DM Mono', monospace" font-size="9" font-weight="600" letter-spacing="1">CLOUD STORAGE</text>
+      <text x="868" y="156" fill="#10221e" font-family="'Manrope', sans-serif" font-size="16" font-weight="700">Azure Blob Storage</text>
+      <text x="868" y="171" fill="#66776e" font-family="'DM Sans', sans-serif" font-size="11">Staged reports &amp; containers</text>
+    </g>
+
+    <!-- Node 5: Downstream destinations -->
+    <g class="hero-node" id="hero-node-dest">
+      <rect x="804" y="207" width="248" height="66" rx="10" fill="#fcfcf7" stroke="#d2d8ce"/>
+      <rect x="816" y="219" width="42" height="42" rx="7" fill="#19352d"/>
+      <g transform="translate(825, 228)" stroke="#d2f36b" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4l2 3h7a2 2 0 0 1 2 2z"/>
+        <polyline points="10 10 13 13 10 16"/>
+        <line x1="7" y1="13" x2="13" y2="13"/>
+      </g>
+      <text x="868" y="229" fill="#587332" font-family="'DM Mono', monospace" font-size="9" font-weight="600" letter-spacing="1">FILE HANDOFF</text>
+      <text x="868" y="248" fill="#10221e" font-family="'Manrope', sans-serif" font-size="16" font-weight="700">File Destinations</text>
+      <text x="868" y="263" fill="#66776e" font-family="'DM Sans', sans-serif" font-size="11">Downstream hot folders</text>
+    </g>
+
+    <!-- Node 6: Email delivery -->
+    <g class="hero-node" id="hero-node-email">
+      <rect x="804" y="299" width="248" height="66" rx="10" fill="#fcfcf7" stroke="#d2d8ce"/>
+      <rect x="816" y="311" width="42" height="42" rx="7" fill="#19352d"/>
+      <g transform="translate(825, 320)" stroke="#d2f36b" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="15" rx="2.5"/>
+        <path d="m3 6 9 6.5 9-6.5"/>
+      </g>
+      <text x="868" y="321" fill="#587332" font-family="'DM Mono', monospace" font-size="9" font-weight="600" letter-spacing="1">NOTIFICATIONS</text>
+      <text x="868" y="340" fill="#10221e" font-family="'Manrope', sans-serif" font-size="16" font-weight="700">Email Delivery</text>
+      <text x="868" y="355" fill="#66776e" font-family="'DM Sans', sans-serif" font-size="11">Dynamic content &amp; attachments</text>
+    </g>
+  </g>
+
+  <!-- Interactive SVG Motion Nodes (SMIL fallback + GSAP animatable) -->
+  <g class="hero-motion-packets" id="hero-motion-packets">
+    <circle class="hero-packet" r="6" fill="#d2f36b" stroke="#10221e" stroke-width="2.5" opacity="0">
+      <animateMotion begin="indefinite" dur="3.5s" repeatCount="indefinite" path="M300 240H416H684H804"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="3.5s" begin="indefinite" repeatCount="indefinite"/>
+    </circle>
+    <circle class="hero-packet" r="5" fill="#fcfcf7" stroke="#718c3d" stroke-width="2" opacity="0">
+      <animateMotion begin="indefinite" dur="4.2s" repeatCount="indefinite" path="M300 332C360 332 365 285 416 285H684C740 285 745 332 804 332"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="4.2s" begin="indefinite" repeatCount="indefinite"/>
+    </circle>
+    <circle class="hero-packet" r="5" fill="#d2f36b" stroke="#19352d" stroke-width="2" opacity="0">
+      <animateMotion begin="indefinite" dur="3.8s" repeatCount="indefinite" path="M300 148C360 148 365 195 416 195H684C740 195 745 148 804 148"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="3.8s" begin="indefinite" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Bottom Caption Bar -->
+  <text x="50" y="458" fill="#8ca094" font-family="'DM Mono', monospace" font-size="10" letter-spacing="1">ILLUSTRATIVE SYSTEM MAP · INDIVIDUAL WORKFLOWS EXECUTE TAILORED ARCHITECTURAL PATHS</text>
 </svg>

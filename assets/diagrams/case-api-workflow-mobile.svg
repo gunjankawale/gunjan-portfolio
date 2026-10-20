@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 830" role="img" aria-labelledby="title desc">
+  <title id="title">Mobile API integration sequence</title>
+  <desc id="desc">Logic Apps sends a dynamic request to a separately developed Function App API. It writes files to Blob Storage and returns a response. Logic Apps moves files and sends a dynamic email.</desc>
+  <defs><pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0v22" fill="none" stroke="#d2f36b" stroke-opacity=".06"/></pattern><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 7 4 0 8Z" fill="#d2f36b"/></marker></defs>
+  <rect width="390" height="830" rx="18" fill="#10221e"/><rect width="390" height="830" rx="18" fill="url(#grid)"/>
+  <text x="22" y="34" fill="#d2f36b" font-family="monospace" font-size="10" letter-spacing="1.2">API CALL · FILES · WORKFLOW CONTINUES</text>
+  <path d="M58 94V738" stroke="#718c3d" stroke-width="2" stroke-dasharray="3 7"/>
+  <g fill="#d2f36b"><circle cx="58" cy="128" r="17"/><circle cx="58" cy="268" r="17"/><circle cx="58" cy="411" r="17"/><circle cx="58" cy="553" r="17"/><circle cx="58" cy="696" r="17"/></g>
+  <g fill="#10221e" font-family="monospace" font-size="10" font-weight="700" text-anchor="middle"><text x="58" y="132">01</text><text x="58" y="272">02</text><text x="58" y="415">03</text><text x="58" y="557">04</text><text x="58" y="700">05</text></g>
+  <g fill="#254238" stroke="#526f5e"><path d="M98 83h250l20 20v91H98z"/><path d="M98 222h250l20 20v102H98z"/><path d="M98 365h250l20 20v94H98z"/><path d="M98 508h250l20 20v94H98z"/><path d="M98 651h250l20 20v94H98z"/></g>
+  <path d="M348 83v20h20" fill="none" stroke="#8ca096"/>
+  <g font-family="Arial,sans-serif"><text x="120" y="117" fill="#d2f36b" font-family="monospace" font-size="9">MY WORK</text><text x="120" y="145" fill="#fcfcf7" font-size="17" font-weight="700">Logic Apps request</text><text x="120" y="169" fill="#c5d0c7" font-size="12">Dynamic payload for the business need</text>
+  <text x="120" y="256" fill="#d2f36b" font-family="monospace" font-size="9">API INTEGRATION</text><text x="120" y="284" fill="#fcfcf7" font-size="17" font-weight="700">Function App API</text><text x="120" y="308" fill="#c5d0c7" font-size="12">Underlying code is separately developed</text>
+  <text x="120" y="399" fill="#d2f36b" font-family="monospace" font-size="9">FUNCTION OUTPUT</text><text x="120" y="427" fill="#fcfcf7" font-size="17" font-weight="700">Generated files</text><text x="120" y="451" fill="#c5d0c7" font-size="12">Written to Azure Blob Storage</text>
+  <text x="120" y="542" fill="#d2f36b" font-family="monospace" font-size="9">RESPONSE</text><text x="120" y="570" fill="#fcfcf7" font-size="17" font-weight="700">Workflow resumes</text><text x="120" y="594" fill="#c5d0c7" font-size="12">Logic Apps continues after the API call</text>
+  <text x="120" y="685" fill="#d2f36b" font-family="monospace" font-size="9">DELIVERY</text><text x="120" y="713" fill="#fcfcf7" font-size="17" font-weight="700">Move files · send email</text><text x="120" y="737" fill="#c5d0c7" font-size="12">Dynamic message with report attachments</text></g>
+  <text x="22" y="794" fill="#a9b8ae" font-family="Arial,sans-serif" font-size="11">No endpoint or internal payload is shown.</text>
+</svg>

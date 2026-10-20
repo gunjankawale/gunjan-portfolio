@@ -2,7 +2,7 @@
 <html lang="en"><head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="A sanitized case study of one migrated API-driven reporting workflow using Azure Logic Apps, a Function App API, Blob Storage and email." />
-  <title>API-Driven Reporting Workflow — Gunjan Kawale</title><link rel="icon" type="image/svg+xml" href="../favicon.svg" /><link rel="stylesheet" href="../styles.css?v=20261020-sims-v1" />
+  <title>API-Driven Reporting Workflow — Gunjan Kawale</title><link rel="icon" type="image/svg+xml" href="../favicon.svg" /><link rel="stylesheet" href="../styles.css?v=20261020-azure-cards-v3" />
 </head><body class="case-detail-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header"><a class="brand" href="../index.html#home" aria-label="Gunjan Kawale, home">GK<span>.</span></a><nav class="main-nav" aria-label="Main navigation"><a href="../index.html#home">Home</a><a href="../index.html#architecture">Architecture</a><a href="../index.html#case-studies">Case Studies</a><a href="../index.html#stack">Technology Stack</a><a href="../index.html#background">Background</a><a href="../index.html#contact">Contact</a></nav><a class="header-resume" href="../Gunjan_Kawale_Resume.pdf" download>Résumé PDF <span aria-hidden="true">↓</span></a></header>
@@ -12,25 +12,68 @@
     <section class="case-outcome-summary" aria-label="Workflow outcomes at a glance"><div><span>PASS PATH</span><p>Continue configured processing: transfer generated reports from Blob Storage to the required destination, then email the customer with dynamic content.</p></div><div><span>FAIL PATH</span><p>Record the business status and follow configured failure handling. An API FAIL is distinct from an Azure action exception.</p></div></section>
     <section class="workflow-sim api-workflow-sim" data-workflow-sim="api" aria-labelledby="api-sim-title">
       <header class="workflow-sim-heading"><div><p class="section-label">SIMULATED WORKFLOW · NO LIVE SERVICES</p><h2 id="api-sim-title">Request to report delivery.</h2><p>Logic Apps calls a Function App API; the Function App runs its own report-generation code.</p></div><span class="simulation-badge"><i aria-hidden="true"></i> INTERACTIVE SIMULATION</span></header>
-      <div class="sim-statusline"><span><i aria-hidden="true"></i> ILLUSTRATIVE RUN</span><span data-sim-status>READY · MANUAL START</span></div>
+      
+      <!-- Logic Apps Designer Command Bar with Run Trigger -->
+      <div class="azure-designer-toolbar">
+        <div class="designer-toolbar-left">
+          <button type="button" class="azure-run-btn" data-sim-run aria-label="Run Trigger">
+            <svg class="run-icon" viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true"><polygon points="3,2 14,8 3,14"></polygon></svg>
+            <span>Run</span>
+          </button>
+          <span class="designer-divider" aria-hidden="true"></span>
+          <span class="designer-title"><img src="../assets/icons/azure-logic-apps.svg" alt="" aria-hidden="true" /> api-reporting-pipeline <small class="designer-env-tag">Consumption</small></span>
+        </div>
+        <div class="designer-toolbar-right">
+          <span class="designer-tool-btn" data-designer-status><span class="tool-dot tool-dot-run"></span> Ready</span>
+          <span class="designer-tool-btn">⏱ Trigger: Recurrence</span>
+        </div>
+      </div>
+
+      <div class="sim-statusline"><span><i aria-hidden="true"></i> RUN ID: e82f-sim-2026</span><span data-sim-status>READY · PRESS RUN</span></div>
       <div class="sim-workspace"><div class="sim-flow-grid" aria-label="API reporting workflow components">
-        <article class="sim-node" data-sim-system="schedule"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/calendar-clock.svg" alt="" aria-hidden="true"></span><div><small>TRIGGER</small><h3>Configured schedule</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>The scheduled trigger starts this Logic Apps workflow.</p><span class="sim-state-pill">SCHEDULED START</span></article>
-        <article class="sim-node" data-sim-system="logic"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/workflow.svg" alt="" aria-hidden="true"></span><div><small>ORCHESTRATION</small><h3>Azure Logic Apps</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Builds a request payload dynamically for the business requirement.</p><div class="sim-payload-preview"><div><span>REQUEST FIELDS</span><small>ILLUSTRATIVE ONLY</small></div><code data-api-payload-field>Configured value</code><code data-api-payload-field>Dynamic value</code><code data-api-payload-field>Business-specific value</code></div></article>
-        <article class="sim-node" data-sim-system="function"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/code.svg" alt="" aria-hidden="true"></span><div><small>API INTEGRATION</small><h3>Function App API</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Logic Apps sends the request. The Function App runs its own report-generation logic.</p><div class="sim-processing"><span data-sim-work-progress></span></div><small class="sim-illustrative">Function App processing · illustrative</small></article>
-        <article class="sim-node" data-sim-system="reports"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/file-chart.svg" alt="" aria-hidden="true"></span><div><small>REPORT GENERATION</small><h3>Three CSV reports</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Generated by the Function App for this workflow.</p><div class="sim-file-stack"><span class="sim-file" data-sim-file="api-report-1"><b>CSV</b><i>Report 1</i></span><span class="sim-file" data-sim-file="api-report-2"><b>CSV</b><i>Report 2</i></span><span class="sim-file" data-sim-file="api-report-3"><b>CSV</b><i>Report 3</i></span></div></article>
-        <article class="sim-node" data-sim-system="storage"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/cloud.svg" alt="" aria-hidden="true"></span><div><small>FILE STORAGE</small><h3>Azure Blob Storage</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>The generated CSV reports are stored for the next workflow actions.</p><div class="sim-file-stack"><span class="sim-file" data-sim-file="api-storage-1"><b>CSV</b><i>Report 1</i></span><span class="sim-file" data-sim-file="api-storage-2"><b>CSV</b><i>Report 2</i></span><span class="sim-file" data-sim-file="api-storage-3"><b>CSV</b><i>Report 3</i></span></div></article>
-        <article class="sim-node" data-sim-system="response"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/git-branch.svg" alt="" aria-hidden="true"></span><div><small>API RESPONSE</small><h3>Business status</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Logic Apps evaluates the returned PASS or FAIL status against configured requirements.</p><div class="sim-api-branches" role="group" aria-label="Choose an illustrative API business outcome"><div><button type="button" data-api-branch="pass" aria-pressed="true">PASS</button><button type="button" data-api-branch="fail" aria-pressed="false">FAIL</button></div><p data-api-branch-description aria-live="polite">Select an outcome to preview its configured path.</p></div></article>
-        <article class="sim-node" data-sim-system="destination" data-api-branch-target="pass"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/folder-sync.svg" alt="" aria-hidden="true"></span><div><small>PASS PATH</small><h3>File delivery</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Logic Apps transfers generated reports from Blob to the required local destination.</p><span class="sim-route-chip">CONFIGURED DESTINATION</span></article>
-        <article class="sim-node" data-sim-system="email" data-api-branch-target="pass"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/mail.svg" alt="" aria-hidden="true"></span><div><small>NOTIFICATION</small><h3>Customer email</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Email content is assembled dynamically for the reporting requirement.</p><div class="sim-email-card"><span>REPORT DELIVERY</span><strong>Monthly reports</strong><small>DYNAMIC CONTENT</small></div></article>
-        <article class="sim-node" data-sim-system="monitor" data-api-branch-target="fail"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/activity.svg" alt="" aria-hidden="true"></span><div><small>STATUS TRACKING</small><h3>Workflow dashboard</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Business status and relevant workflow progress are tracked for visibility.</p><span class="sim-state-pill" data-sim-final-status>Awaiting walkthrough</span></article>
-      </div>
+        <article class="sim-node" data-sim-system="schedule"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/calendar-clock.svg" alt="" aria-hidden="true"></span><div><small>TRIGGER</small><h3>Configured schedule</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>The scheduled trigger starts this Logic Apps workflow run.</p><span class="sim-state-pill">SCHEDULED START</span></article>
+
+        <article class="sim-node sim-node-expanded" data-sim-system="logic"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/azure-logic-apps.svg" alt="" aria-hidden="true"></span><div><small>ORCHESTRATION</small><h3>Azure Logic Apps</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Assembles a structured API request payload dynamically based on configured reporting parameters.</p>
+        <div class="sim-payload-box" data-payload-panel>
+          <div class="sim-payload-header">
+            <span class="sim-payload-badge">REQUEST PAYLOAD (POST)</span>
+            <button type="button" class="sim-copy-btn" data-copy-payload aria-label="Copy illustrative JSON payload"><img class="control-icon" src="../assets/icons/copy.svg" alt="" aria-hidden="true"><span data-copy-label>Copy</span></button>
+          </div>
+          <pre class="sim-code-editor"><code data-copy-source>{
+  <span class="tok-key">"reportType"</span>: <span class="tok-val" data-api-payload-field>"{{configured_report_type}}"</span>,
+  <span class="tok-key">"dateRange"</span>: {
+    <span class="tok-key">"startDate"</span>: <span class="tok-val" data-api-payload-field>"{{dynamic_period_start}}"</span>,
+    <span class="tok-key">"endDate"</span>: <span class="tok-val" data-api-payload-field>"{{dynamic_period_end}}"</span>
+  },
+  <span class="tok-key">"parameters"</span>: {
+    <span class="tok-key">"outputFormat"</span>: <span class="tok-str">"CSV"</span>,
+    <span class="tok-key">"batchId"</span>: <span class="tok-val" data-api-payload-field>"{{orchestration_run_id}}"</span>
+  }
+}</code></pre>
+          <div class="sim-copy-feedback" data-copy-feedback aria-live="polite"></div>
+          <small class="sim-illustrative">Generic placeholders · actual schema is confidential</small>
+        </div></article>
+
+        <article class="sim-node" data-sim-system="function"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/azure-functions.svg" alt="" aria-hidden="true"></span><div><small>API INTEGRATION</small><h3>Function App API</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Logic Apps calls the endpoint. The Function App executes its own underlying report-generation code.</p><div class="sim-processing"><span data-sim-work-progress></span></div><small class="sim-illustrative">Function App processing · illustrative</small></article>
+
+        <article class="sim-node" data-sim-system="reports"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/file-csv.svg" alt="" aria-hidden="true"></span><div><small>REPORT GENERATION</small><h3>CSV reports</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Generated by the Function App for this workflow execution.</p><div class="sim-file-stack"><span class="sim-file" data-sim-file="api-report-1"><b>CSV</b><i>Report file A</i></span><span class="sim-file" data-sim-file="api-report-2"><b>CSV</b><i>Report file B</i></span></div></article>
+
+        <article class="sim-node" data-sim-system="storage"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/azure-blob-storage.svg" alt="" aria-hidden="true"></span><div><small>FILE STORAGE</small><h3>Azure Blob Storage</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>The generated CSV reports are staged in Blob containers for subsequent workflow actions.</p><div class="sim-file-stack"><span class="sim-file" data-sim-file="api-storage-1"><b>CSV</b><i>Report file A</i></span><span class="sim-file" data-sim-file="api-storage-2"><b>CSV</b><i>Report file B</i></span></div></article>
+
+        <article class="sim-node" data-sim-system="response"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/git-branch.svg" alt="" aria-hidden="true"></span><div><small>API RESPONSE</small><h3>Business status</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Logic Apps evaluates the returned PASS or FAIL status against configured business requirements.</p><div class="sim-api-branches" role="group" aria-label="Choose an illustrative API business outcome"><div><button type="button" data-api-branch="pass" aria-pressed="true">PASS</button><button type="button" data-api-branch="fail" aria-pressed="false">FAIL</button></div><p data-api-branch-description aria-live="polite">Select an outcome to preview its configured path.</p></div></article>
+
+        <article class="sim-node" data-sim-system="destination" data-api-branch-target="pass"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/folder-destination.svg" alt="" aria-hidden="true"></span><div><small>PASS PATH</small><h3>File delivery</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Logic Apps transfers generated reports from Blob to the required business destination.</p><span class="sim-route-chip">CONFIGURED DESTINATION</span></article>
+
+        <article class="sim-node" data-sim-system="email" data-api-branch-target="pass"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/mail.svg" alt="" aria-hidden="true"></span><div><small>NOTIFICATION</small><h3>Customer email</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Email content is assembled dynamically for the reporting requirement.</p><div class="sim-email-card"><span>REPORT NOTIFICATION</span><strong>CSV reports</strong><small>DYNAMIC CONTENT</small></div></article>
+
+        <article class="sim-node" data-sim-system="monitor" data-api-branch-target="fail"><div class="sim-node-head"><span class="sim-node-index"><img src="../assets/icons/activity.svg" alt="" aria-hidden="true"></span><div><small>STATUS TRACKING</small><h3>Workflow dashboard</h3></div><span class="sim-node-state" data-sim-state>READY</span></div><p>Business status and relevant workflow progress are tracked for operational visibility.</p><span class="sim-state-pill" data-sim-final-status>Awaiting walkthrough</span></article>
         <div class="sim-transfer-lane"><span data-sim-lane-label>DATA HANDOFF · ILLUSTRATIVE</span><div class="sim-lane-track" data-sim-lane><i data-sim-packet>API</i></div></div>
-        <aside class="sim-console" aria-label="Simulated activity feed"><div class="sim-console-head"><div><span class="sim-small-label">SIMULATED ACTIVITY</span><strong>Execution console</strong></div><span>NO TIMESTAMPS</span></div><ol data-sim-console></ol></aside>
       </div>
-      <div class="sim-controls" role="group" aria-label="API reporting walkthrough controls"><div class="sim-control-buttons"><button type="button" class="sim-start" data-sim-start><img class="control-icon" src="../assets/icons/play.svg" alt="" aria-hidden="true">Start walkthrough</button><button type="button" data-sim-play><img class="control-icon" src="../assets/icons/play.svg" alt="" aria-hidden="true">Play</button><button type="button" data-sim-pause disabled><img class="control-icon" src="../assets/icons/pause.svg" alt="" aria-hidden="true">Pause</button><button type="button" data-sim-previous disabled><img class="control-icon" src="../assets/icons/chevron-left.svg" alt="" aria-hidden="true">Previous</button><button type="button" data-sim-next><img class="control-icon" src="../assets/icons/chevron-right.svg" alt="" aria-hidden="true">Next</button><button type="button" data-sim-replay disabled><img class="control-icon" src="../assets/icons/replay.svg" alt="" aria-hidden="true">Replay</button></div><div class="sim-progress-block"><div><span data-sim-step>Preview · 0 steps</span><span data-sim-clock>0:00</span></div><progress max="8" value="0" data-sim-progress-bar aria-label="Simulation progress"></progress></div></div>
-      <div class="sim-current-step" aria-live="polite"><span data-sim-phase>STATIC PREVIEW</span><h3 data-sim-title>Explore this workflow</h3><p data-sim-description>Start the illustrative sequence or move through it manually. No live API or cloud service is contacted.</p></div>
-      <details class="sim-full-workflow"><summary>View walkthrough steps and technical boundary</summary><ol data-sim-outline></ol><p>Logic Apps calls the Function App API; I do not write the Function App’s underlying code. Payload values are not shown because the API schema is business-specific.</p></details>
-      <noscript><style>.api-workflow-sim .sim-controls{display:none!important}</style><p class="sim-noscript">JavaScript is required for walkthrough controls. The workflow components and PASS/FAIL paths remain visible.</p></noscript>
+      <aside class="sim-console" aria-label="Simulated activity feed"><div class="sim-console-head"><div><span class="sim-small-label">SIMULATED ACTIVITY</span><strong>Execution console</strong></div><span>NO TIMESTAMPS</span></div><ol data-sim-console></ol></aside>
+      </div>
+
+      <div class="sim-current-step" aria-live="polite"><span data-sim-phase>STATIC PREVIEW</span><h3 data-sim-title>Explore this workflow</h3><p data-sim-description>Click Run in the Logic Apps toolbar above to trigger the pipeline execution.</p></div>
+      <details class="sim-full-workflow"><summary>View walkthrough steps and technical boundary</summary><ol data-sim-outline></ol><p>Logic Apps calls the Function App API; I do not write the Function App’s underlying code. Payload values are illustrative placeholders because the API schema is business-specific.</p></details>
     </section>
     <div class="case-detail-grid">
       <section class="detail-section"><p class="section-label">MY LOGIC APPS WORK</p><h2>Configure the call.<br /><em>Coordinate delivery.</em></h2><ul class="detail-list"><li>Configure the scheduled Logic Apps trigger and assemble API payloads dynamically for business requirements.</li><li>Call the Function App API and handle its response in the workflow; the Function App’s underlying code is maintained separately.</li><li>Coordinate transfer of generated reports from Blob Storage to the required destination.</li><li>Prepare customer email content dynamically for the reporting requirement.</li></ul></section>
@@ -41,6 +84,6 @@
   </main>
   <footer class="site-footer"><a class="brand" href="../index.html#home" aria-label="Back to portfolio">GK<span>.</span></a><span>© <span id="copyright-year">2026</span> GUNJAN KAWALE</span><a href="../Gunjan_Kawale_Resume.pdf" download>DOWNLOAD RÉSUMÉ PDF ↓</a></footer>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js" defer crossorigin="anonymous"></script>
-  <script src="../case-simulations.js?v=20261020-sims-v2" defer></script>
-  <script src="../script.js?v=20261020-sims-v1" defer></script>
+  <script src="../case-simulations.js?v=20261020-zero-bugs-v9" defer></script>
+  <script src="../script.js?v=20261020-zero-bugs-v8" defer></script>
 </body></html>
