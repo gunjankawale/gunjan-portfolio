@@ -6,7 +6,7 @@ A static engineering portfolio built with HTML, CSS, JavaScript and local SVGs. 
 
 - **Home** — concise introduction, animated system map, professional profile links and résumé PDF.
 - **Workflow Architecture & Reliability** — two separate diagrams: Redpoint migration and output reconciliation, then the shared Logic Apps Try/Catch wrapper and dashboard status tracking. It is an overview, not a numbered case study.
-- **Interactive Workflow Engineering** — four data-driven walkthroughs: the architecture and reliability overview plus the three case studies. Each provides step narration, input/action/output details, progress, previous/next controls, playback and a full-step overview; the API workflow has distinct business PASS and FAIL paths.
+- **API Reporting Pipeline animation** — an eight-scene GSAP simulation embedded in the API reporting case study, with dynamic payload assembly, API transit, separate Function App processing, CSV storage, PASS/FAIL branches and delivery or failure handling.
 - **Case Study 1 — API-Driven Reporting** — one migrated Logic Apps workflow calling a Function App API; Function App report generation and Blob storage are distinct from Logic Apps status evaluation and downstream orchestration.
 - **Case Study 2 — New CSV Processing** — a workflow built from scratch for a fresh requirement, applying SQL stored procedures and producing TXT output.
 - **Case Study 3 — Database-Driven File Routing** — routing locations and email recipients are read from database configuration for TXT/PDF file handling.
@@ -16,7 +16,7 @@ A static engineering portfolio built with HTML, CSS, JavaScript and local SVGs. 
 
 ## Interactive SVG diagrams
 
-The system map and four workflow walkthroughs use local SVG, CSS and small JavaScript controls. The walkthrough diagrams are rendered from structured workflow data and highlight the active node and handoff alongside synchronized step explanations. Each walkthrough has Start, Play, Pause, Previous, Next and Replay controls, a progress indicator, and an expandable full-workflow overview. The API reporting walkthrough separates its business PASS/FAIL paths from shared Azure action-exception handling. Static SVG fallbacks and case-study text remain available without JavaScript. Playback starts only after a visitor chooses a control; reduced-motion preferences remove diagram transitions.
+The system map and architecture diagrams use local SVG fallbacks. The API Reporting case study includes a simulated, eight-scene GSAP animation rendered with HTML and CSS. Its controls support Start, Play, Pause, Previous, Next, Replay, branch selection and a full workflow view. The simulation never calls a real API or cloud service. It loads a pinned GSAP build from jsDelivr; if that CDN is unavailable or reduced motion is requested, the technical explanation and manual scene navigation remain available without animation.
 
 The six desktop diagram families are:
 
@@ -34,7 +34,8 @@ Each has a separate mobile layout: `hero-system-map-mobile.svg`, `case-redpoint-
 - `index.html` — portfolio structure and static explanations.
 - `projects/api-reporting.html`, `projects/csv-processing.html`, `projects/file-routing.html` — detailed case studies.
 - `styles.css` — editorial visual system, responsive layouts, focus states and reduced-motion styles.
-- `script.js` — SVG diagram renderer and walkthrough controls, active section state, reading progress and footer year.
+- `script.js` — existing diagram controls, active section state, reading progress and footer year.
+- `api-reporting.js` — the API case-study animation and scene controls.
 - `assets/diagrams/` — six original desktop SVGs and mobile counterparts.
 - `favicon.svg`, `social-preview.svg`, `social-preview.png` — local identity and share-preview assets.
 - `Gunjan_Kawale_Resume.pdf` — public résumé download linked from the site.
@@ -64,7 +65,7 @@ The configured site address is [gunjankawale.github.io/gunjan-portfolio](https:/
 
 - Visit the home page and each case-study route under the repository subpath.
 - Check section navigation, case-study links, résumé downloads, email, GitHub and LinkedIn.
-- Use all four walkthroughs' Start, Play, Pause, Previous, Next, Replay and full-overview controls by keyboard and pointer; check both API business-status paths, a reduced-motion preference and no-JavaScript static fallbacks.
+- Use the API case study's Start, Play, Pause, Previous, Next, Replay and full-workflow controls by keyboard and pointer; check both business-status paths, reduced motion, and fallback behavior when GSAP is unavailable.
 - Review wide, tablet and narrow layouts, including the static mobile diagram alternatives.
 - Confirm no public workflow trigger, live API call, database connection or paid asset dependency is introduced.
 - Confirm the Pages artifact stages only the intended public files.

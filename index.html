@@ -20,14 +20,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261020-walkthrough-v1" />
+  <link rel="stylesheet" href="styles.css?v=20261020-gsap-v1" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Gunjan Kawale, home">GK<span>.</span></a>
     <nav class="main-nav" aria-label="Main navigation">
-      <a href="#home">Home</a><a href="#architecture">Architecture</a><a href="#walkthroughs">Walkthroughs</a><a href="#case-studies">Case Studies</a><a href="#stack">Technology Stack</a><a href="#background">Background</a><a href="#contact">Contact</a>
+      <a href="#home">Home</a><a href="#architecture">Architecture</a><a href="#case-studies">Case Studies</a><a href="#stack">Technology Stack</a><a href="#background">Background</a><a href="#contact">Contact</a>
     </nav>
     <a class="header-resume" href="Gunjan_Kawale_Resume.pdf" download>Résumé PDF <span aria-hidden="true">↓</span></a>
   </header>
@@ -38,7 +38,7 @@
         <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> DATA ENGINEER <span class="eyebrow-divider">/</span> NAGPUR, INDIA</p>
         <h1 id="hero-title">Data workflows.<br />Cloud integration.<br /><em>Reliable processing.</em></h1>
         <p class="hero-intro">I work across ETL development, workflow migration, SQL, API integration and automated file processing, with professional experience in Redpoint, SSIS and Azure Logic Apps.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#walkthroughs">Explore walkthroughs <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="#case-studies">View case studies <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="Gunjan_Kawale_Resume.pdf" download>Download résumé <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-actions"><a class="button button-primary" href="#architecture">Explore architecture <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="#case-studies">View case studies <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="Gunjan_Kawale_Resume.pdf" download>Download résumé <span aria-hidden="true">↗</span></a></div>
         <div class="hero-links" aria-label="Professional profiles"><a href="https://github.com/gunjankawale" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/gunjan-kawale" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
       </div>
       <figure class="hero-figure">
@@ -88,45 +88,6 @@
       </div>
     </section>
 
-    <section class="section walkthrough-section" id="walkthroughs" aria-labelledby="walkthroughs-title">
-      <div class="section-heading motion-studies-heading"><div><p class="section-label"><span>INTERACTIVE</span> WORKFLOW ENGINEERING</p><h2 id="walkthroughs-title">Explore the flow.<br /><em>Step by step.</em></h2></div><p class="section-summary">Four sanitized walkthroughs show the systems involved, the action at each stage and what moves on. Start playback yourself or use the step controls.</p></div>
-      <div class="walkthrough-list">
-        <article class="walkthrough-card" data-walkthrough="overview" aria-labelledby="walkthrough-overview-title">
-          <header class="walkthrough-card-header"><div><p class="section-label">OVERVIEW · MIGRATION &amp; RELIABILITY</p><h3 id="walkthrough-overview-title">Preserve behavior. Make failures visible.</h3><p>First follow the Redpoint-to-Logic Apps migration and output reconciliation. Then see the shared Try/Catch action-failure path; its actions and logging vary by workflow.</p></div><span class="walkthrough-duration">~60 SEC</span></header>
-          <div class="walkthrough-diagram-wrap"><picture class="walkthrough-static"><source media="(max-width: 680px)" srcset="assets/diagrams/architecture-wrapper-mobile.svg" /><img src="assets/diagrams/workflow-architecture.svg" alt="Static architecture: Logic Apps workflow-specific actions and status logging run inside Try. Action exceptions enter Catch, which sends an email alert and records the failure in the monitoring dashboard." /></picture><svg class="walkthrough-svg" data-flow-diagram role="img" aria-label="Interactive architecture walkthrough diagram"></svg></div>
-          <div class="walkthrough-controls" role="group" aria-label="Architecture walkthrough controls"><button type="button" data-walkthrough-start>Start walkthrough</button><button type="button" data-walkthrough-play>Play</button><button type="button" data-walkthrough-pause disabled>Pause</button><button type="button" data-walkthrough-prev>Previous step</button><button type="button" data-walkthrough-next>Next step</button><button type="button" data-walkthrough-replay>Replay</button><button type="button" data-walkthrough-overview aria-expanded="false">Full workflow overview</button><span class="walkthrough-status" data-walkthrough-status aria-live="polite">Preview · use Next step or Start walkthrough</span></div>
-          <div class="walkthrough-progress"><span data-step-count>Step 1 of 11</span><progress value="1" max="11" data-step-progress aria-label="Walkthrough progress"></progress></div>
-          <section class="walkthrough-explanation" aria-live="polite"><p class="step-scene" data-step-scene>SCENE A · MIGRATION</p><h4 data-step-title>Existing workflow in Redpoint</h4><p data-step-description>Existing production workflows already carry the business rules and expected behavior.</p><dl><div><dt>Input</dt><dd data-step-input>Existing Redpoint workflow</dd></div><div><dt>Action</dt><dd data-step-action>Identify the current stages and business logic before migration.</dd></div><div><dt>Output</dt><dd data-step-output>Reference behavior for the Azure Logic Apps version.</dd></div></dl></section>
-          <details class="walkthrough-all-steps"><summary>Read the full walkthrough</summary><ol data-walkthrough-step-list></ol></details>
-        </article>
-        <article class="walkthrough-card" data-walkthrough="api" aria-labelledby="walkthrough-api-title">
-          <header class="walkthrough-card-header"><div><p class="section-label">CASE STUDY 01 · MIGRATED REPORTING</p><h3 id="walkthrough-api-title">API-driven reporting workflow</h3><p>Logic Apps sends a dynamic request to a Function App API, evaluates its response, and coordinates generated report delivery.</p><a class="walkthrough-case-link" href="projects/api-reporting.html">Read the case study ↗</a></div><span class="walkthrough-duration">~60 SEC</span></header>
-          <div class="branch-controls" role="group" aria-label="Choose the API business-status path"><span>Business-status path</span><button type="button" data-branch="pass" aria-pressed="true">PASS</button><button type="button" data-branch="fail" aria-pressed="false">FAIL</button><small>API status handling is separate from Azure action exceptions in Catch.</small></div>
-          <div class="walkthrough-diagram-wrap"><picture class="walkthrough-static"><source media="(max-width: 680px)" srcset="assets/diagrams/api-reporting-mobile.svg" /><img src="assets/diagrams/api-reporting.svg" alt="Logic Apps calls a Function App API, evaluates the response status and coordinates CSV report delivery and email." /></picture><svg class="walkthrough-svg" data-flow-diagram role="img" aria-label="Interactive API reporting workflow diagram"></svg></div>
-          <div class="walkthrough-controls" role="group" aria-label="API reporting walkthrough controls"><button type="button" data-walkthrough-start>Start walkthrough</button><button type="button" data-walkthrough-play>Play</button><button type="button" data-walkthrough-pause disabled>Pause</button><button type="button" data-walkthrough-prev>Previous step</button><button type="button" data-walkthrough-next>Next step</button><button type="button" data-walkthrough-replay>Replay</button><button type="button" data-walkthrough-overview aria-expanded="false">Full workflow overview</button><span class="walkthrough-status" data-walkthrough-status aria-live="polite">Preview · choose PASS or FAIL, then start</span></div>
-          <div class="walkthrough-progress"><span data-step-count>Step 1 of 9</span><progress value="1" max="9" data-step-progress aria-label="Walkthrough progress"></progress></div>
-          <section class="walkthrough-explanation" aria-live="polite"><p class="step-scene" data-step-scene>PASS PATH · REPORT DELIVERY</p><h4 data-step-title>Scheduled trigger</h4><p data-step-description>A schedule configured in Logic Apps starts this reporting workflow.</p><dl><div><dt>Input</dt><dd data-step-input>Configured schedule</dd></div><div><dt>Action</dt><dd data-step-action>Start the reporting workflow.</dd></div><div><dt>Output</dt><dd data-step-output>Workflow run begins.</dd></div></dl></section>
-          <details class="walkthrough-all-steps"><summary>Read the full walkthrough</summary><ol data-walkthrough-step-list></ol></details>
-        </article>
-        <article class="walkthrough-card" data-walkthrough="csv" aria-labelledby="walkthrough-csv-title">
-          <header class="walkthrough-card-header"><div><p class="section-label">CASE STUDY 02 · NEW WORKFLOW</p><h3 id="walkthrough-csv-title">CSV input to TXT delivery</h3><p>A new Logic Apps flow for a fresh requirement: archive the incoming CSV, apply SQL stored procedures and hand off TXT outputs.</p><a class="walkthrough-case-link" href="projects/csv-processing.html">Read the case study ↗</a></div><span class="walkthrough-duration">~55 SEC</span></header>
-          <div class="walkthrough-diagram-wrap"><picture class="walkthrough-static"><source media="(max-width: 680px)" srcset="assets/diagrams/csv-processing-mobile.svg" /><img src="assets/diagrams/csv-processing.svg" alt="Logic Apps triggers on CSV arrival, archives the input, calls SQL stored procedures, creates TXT outputs and delivers them downstream and by email." /></picture><svg class="walkthrough-svg" data-flow-diagram role="img" aria-label="Interactive CSV processing workflow diagram"></svg></div>
-          <div class="walkthrough-controls" role="group" aria-label="CSV processing walkthrough controls"><button type="button" data-walkthrough-start>Start walkthrough</button><button type="button" data-walkthrough-play>Play</button><button type="button" data-walkthrough-pause disabled>Pause</button><button type="button" data-walkthrough-prev>Previous step</button><button type="button" data-walkthrough-next>Next step</button><button type="button" data-walkthrough-replay>Replay</button><button type="button" data-walkthrough-overview aria-expanded="false">Full workflow overview</button><span class="walkthrough-status" data-walkthrough-status aria-live="polite">Preview · use Next step or Start walkthrough</span></div>
-          <div class="walkthrough-progress"><span data-step-count>Step 1 of 9</span><progress value="1" max="9" data-step-progress aria-label="Walkthrough progress"></progress></div>
-          <section class="walkthrough-explanation" aria-live="polite"><p class="step-scene" data-step-scene>SEQUENTIAL PROCESSING</p><h4 data-step-title>CSV arrives from upstream</h4><p data-step-description>An upstream process places the CSV file in the designated hot folder.</p><dl><div><dt>Input</dt><dd data-step-input>CSV file from upstream</dd></div><div><dt>Action</dt><dd data-step-action>Place the file in the configured hot folder.</dd></div><div><dt>Output</dt><dd data-step-output>File is available for the Logic Apps trigger.</dd></div></dl></section>
-          <details class="walkthrough-all-steps"><summary>Read the full walkthrough</summary><ol data-walkthrough-step-list></ol></details>
-        </article>
-        <article class="walkthrough-card" data-walkthrough="routing" aria-labelledby="walkthrough-routing-title">
-          <header class="walkthrough-card-header"><div><p class="section-label">CASE STUDY 03 · MIGRATED WORKFLOW</p><h3 id="walkthrough-routing-title">Database-driven file routing</h3><p>A Redpoint workflow migrated to Logic Apps with existing business logic preserved. At runtime, SQL configuration supplies destinations and recipients.</p><a class="walkthrough-case-link" href="projects/file-routing.html">Read the case study ↗</a></div><span class="walkthrough-duration">~65 SEC</span></header>
-          <div class="walkthrough-diagram-wrap"><picture class="walkthrough-static"><source media="(max-width: 680px)" srcset="assets/diagrams/file-routing-mobile.svg" /><img src="assets/diagrams/file-routing.svg" alt="Logic Apps reads SQL routing configuration before handling TXT/PDF files, configured destinations, archiving and notification." /></picture><svg class="walkthrough-svg" data-flow-diagram role="img" aria-label="Interactive database-driven file routing workflow diagram"></svg></div>
-          <div class="walkthrough-controls" role="group" aria-label="File routing walkthrough controls"><button type="button" data-walkthrough-start>Start walkthrough</button><button type="button" data-walkthrough-play>Play</button><button type="button" data-walkthrough-pause disabled>Pause</button><button type="button" data-walkthrough-prev>Previous step</button><button type="button" data-walkthrough-next>Next step</button><button type="button" data-walkthrough-replay>Replay</button><button type="button" data-walkthrough-overview aria-expanded="false">Full workflow overview</button><span class="walkthrough-status" data-walkthrough-status aria-live="polite">Preview · use Next step or Start walkthrough</span></div>
-          <div class="walkthrough-progress"><span data-step-count>Step 1 of 11</span><progress value="1" max="11" data-step-progress aria-label="Walkthrough progress"></progress></div>
-          <section class="walkthrough-explanation" aria-live="polite"><p class="step-scene" data-step-scene>MIGRATION · VALIDATION</p><h4 data-step-title>Existing Redpoint flow</h4><p data-step-description>The current workflow routes files using database configuration.</p><dl><div><dt>Input</dt><dd data-step-input>Existing Redpoint workflow</dd></div><div><dt>Action</dt><dd data-step-action>Document its functional stages and preserved business behavior.</dd></div><div><dt>Output</dt><dd data-step-output>Reference behavior for migration and reconciliation.</dd></div></dl></section>
-          <details class="walkthrough-all-steps"><summary>Read the full walkthrough</summary><ol data-walkthrough-step-list></ol></details>
-        </article>
-      </div>
-    </section>
-
     <section class="section stack-section" id="stack" aria-labelledby="stack-title">
       <div class="section-heading"><div><p class="section-label"><span>03</span> TECHNOLOGY STACK</p><h2 id="stack-title">Tools in their<br /><em>working context.</em></h2></div><p class="section-summary">Technologies grouped by the kinds of work they support. Their use varies across roles and workflows.</p></div>
       <div class="stack-grid">
@@ -154,6 +115,6 @@
   </main>
   <footer class="site-footer"><a class="brand" href="#home" aria-label="Back to top">GK<span>.</span></a><span>© <span id="copyright-year">2026</span> GUNJAN KAWALE</span><a href="Gunjan_Kawale_Resume.pdf" download>DOWNLOAD RÉSUMÉ PDF ↓</a></footer>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
-  <script src="script.js?v=20261020-walkthrough-v1" defer></script>
+  <script src="script.js?v=20261020-gsap-v1" defer></script>
 </body>
 </html>

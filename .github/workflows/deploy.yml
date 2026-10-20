@@ -28,7 +28,7 @@ jobs:
       - name: Stage static site files
         run: |
           mkdir -p _site/assets/diagrams _site/projects
-          cp index.html styles.css script.js favicon.svg social-preview.png Gunjan_Kawale_Resume.pdf _site/
+          cp index.html styles.css script.js api-reporting.js favicon.svg social-preview.png Gunjan_Kawale_Resume.pdf _site/
           cp assets/diagrams/hero-system-map.svg assets/diagrams/hero-system-map-mobile.svg assets/diagrams/case-redpoint-migration.svg assets/diagrams/case-redpoint-migration-mobile.svg assets/diagrams/workflow-architecture.svg assets/diagrams/architecture-wrapper-mobile.svg assets/diagrams/api-reporting.svg assets/diagrams/api-reporting-mobile.svg assets/diagrams/csv-processing.svg assets/diagrams/csv-processing-mobile.svg assets/diagrams/file-routing.svg assets/diagrams/file-routing-mobile.svg _site/assets/diagrams/
           cp projects/api-reporting.html projects/csv-processing.html projects/file-routing.html _site/projects/
       - name: Upload site files
