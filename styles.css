@@ -305,6 +305,22 @@ svg {
   color: var(--forest);
 }
 
+.hero-resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #4b6354;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color .16s ease;
+  padding: 0 4px;
+}
+.hero-resume-link:hover {
+  color: #10221e;
+}
+
 .hero-links {
   gap: 23px;
   margin-top: 27px;
@@ -551,11 +567,12 @@ svg {
 
 .stack-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 16px;
 }
 
 .stack-card {
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
   min-height: 250px;
@@ -567,10 +584,16 @@ svg {
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
+/* Make 4th and 5th cards span 3 columns each to perfectly balance 5 items across 2 rows */
+.stack-card:nth-child(4),
+.stack-card:nth-child(5) {
+  grid-column: span 3;
+}
+
 .stack-card:hover {
   transform: translateY(-2px);
   border-color: #8ba94c;
-  box-shadow: 0 8px 20px rgba(16, 34, 30, 0.08);
+  box-shadow: 0 6px 20px rgba(139, 169, 76, 0.16);
 }
 
 .stack-card-current {
@@ -688,16 +711,48 @@ svg {
 }
 
 .career-list {
+  position: relative;
   border-top: 1px solid #c9d1c6;
 }
 
 .career-row {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(135px, .75fr) minmax(0, 2.5fr) minmax(125px, .8fr);
   align-items: center;
   gap: 22px;
-  padding: 20px 0;
+  padding: 22px 0 22px 24px;
   border-bottom: 1px solid #c9d1c6;
+}
+
+/* Vertical Timeline Spine */
+.career-row::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #cbd6c7;
+}
+
+/* Milestone Node */
+.career-row::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 29px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #718d40;
+  box-shadow: 0 0 0 2px #e8ebe1;
+}
+
+.career-row:first-child::after {
+  background: var(--lime);
+  border-color: #10221e;
 }
 
 .career-date {
@@ -1309,6 +1364,12 @@ svg {
   .notes-grid,
   .stack-grid {
     grid-template-columns: 1fr;
+  }
+
+  .stack-card,
+  .stack-card:nth-child(4),
+  .stack-card:nth-child(5) {
+    grid-column: span 1;
   }
 
   .case-index-card {

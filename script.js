@@ -44,6 +44,7 @@
       ready: false,
       playing: false,
       started: false,
+      finished: false,
       gsapTimeline: null
     };
 
