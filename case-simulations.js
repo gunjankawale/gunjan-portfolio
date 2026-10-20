@@ -29,18 +29,15 @@
       ]
     },
     routing: {
-      total: 9,
-      logs: ['Legacy workflow stages reviewed', 'Logic Apps path aligned', 'Outputs reconciled conceptually', 'TXT/PDF files available', 'File trigger activated', 'Database configuration read', 'Files routed and archived', 'Success email prepared', 'Workflow status recorded'],
+      total: 6,
+      logs: ['TXT/PDF files available', 'File trigger activated', 'Database configuration read', 'Files routed and archived', 'Success email prepared', 'Workflow status recorded'],
       scenes: [
-        { title: 'Existing Redpoint workflow', phase: 'MIGRATION · LEGACY', text: 'Start with the existing Redpoint file-routing workflow and its business logic.', systems: ['redpoint'], files: [], packet: 'LEGACY', log: 0, duration: 5 },
-        { title: 'Move the workflow to Logic Apps', phase: 'MIGRATION · PRESERVE LOGIC', text: 'The workflow is migrated to Azure Logic Apps while preserving the existing business logic.', systems: ['redpoint', 'logic'], files: [], packet: 'LOGIC', log: 1, duration: 5 },
-        { title: 'Reconcile outputs', phase: 'MIGRATION · VALIDATION', text: 'Legacy and migrated outputs are compared conceptually to validate consistent behavior. No measured reconciliation figures are shown.', systems: ['redpoint', 'logic', 'reconcile'], files: [], packet: 'COMPARE', log: 2, duration: 6 },
-        { title: 'TXT and PDF files are available', phase: 'RUNTIME · FILE ARRIVAL', text: 'For a normal runtime execution, applicable TXT and PDF files are available in the configured input or hot folder.', systems: ['files'], files: ['txt-input', 'pdf-input'], packet: 'TXT / PDF', log: 3, duration: 5 },
-        { title: 'File trigger starts processing', phase: 'RUNTIME · TRIGGER', text: 'The Azure Logic Apps file-arrival trigger initiates processing.', systems: ['files', 'logic'], files: ['txt-input', 'pdf-input'], packet: 'TRIGGER', log: 4, duration: 5 },
-        { title: 'Read routing configuration', phase: 'RUNTIME · DATABASE LOOKUP', text: 'Logic Apps reads configured output and archive destinations and email recipients from the SQL database. Open the database card to inspect generic placeholders.', systems: ['logic', 'database'], files: ['txt-input', 'pdf-input'], packet: 'CONFIG', log: 5, progress: .8, duration: 6 },
-        { title: 'Route and archive files', phase: 'RUNTIME · FILE OPERATIONS', text: 'Logic Apps identifies applicable TXT and PDF files, then moves them to the database-specified output and archive locations.', systems: ['logic', 'routes'], files: ['txt-input', 'pdf-input', 'txt-output', 'pdf-output', 'txt-archive', 'pdf-archive'], packet: 'TXT / PDF', log: 6, progress: 1, duration: 7 },
-        { title: 'Prepare the success email', phase: 'RUNTIME · NOTIFICATION', text: 'The success email goes to recipients supplied by the database and includes dynamic TXT and PDF counts. Values shown are placeholders.', systems: ['logic', 'email'], files: ['txt-output', 'pdf-output', 'txt-archive', 'pdf-archive'], packet: 'EMAIL', log: 7, progress: 1, duration: 6 },
-        { title: 'Record workflow status', phase: 'RUNTIME · OBSERVABILITY', text: 'Relevant workflow status logging completes the runtime overview. Migration and output reconciliation remain a separate phase.', systems: ['logic', 'monitor'], files: ['txt-output', 'pdf-output'], packet: 'STATUS', log: 8, progress: 1, status: 'Completed', duration: 5 }
+        { title: 'TXT and PDF files are available', phase: 'RUNTIME · FILE ARRIVAL', text: 'Applicable TXT and PDF files are available in the configured input or hot folder.', systems: ['files'], files: ['txt-input', 'pdf-input'], packet: 'TXT / PDF', log: 0, duration: 5 },
+        { title: 'File trigger starts processing', phase: 'RUNTIME · TRIGGER', text: 'The Azure Logic Apps file-arrival trigger initiates processing.', systems: ['files', 'logic'], files: ['txt-input', 'pdf-input'], packet: 'TRIGGER', log: 1, duration: 5 },
+        { title: 'Read routing configuration', phase: 'RUNTIME · DATABASE LOOKUP', text: 'Logic Apps reads configured output and archive destinations and email recipients from the SQL database.', systems: ['logic', 'database'], files: ['txt-input', 'pdf-input'], packet: 'CONFIG', log: 2, progress: .8, duration: 6 },
+        { title: 'Route and archive files', phase: 'RUNTIME · FILE OPERATIONS', text: 'Logic Apps moves applicable TXT and PDF files to the database-specified output and archive locations.', systems: ['logic', 'routes'], files: ['txt-input', 'pdf-input', 'txt-output', 'pdf-output', 'txt-archive', 'pdf-archive'], packet: 'TXT / PDF', log: 3, progress: 1, duration: 7 },
+        { title: 'Prepare the success email', phase: 'RUNTIME · NOTIFICATION', text: 'The success email goes to configured recipients and includes dynamic TXT and PDF counts. Values shown are placeholders.', systems: ['logic', 'email'], files: ['txt-output', 'pdf-output', 'txt-archive', 'pdf-archive'], packet: 'EMAIL', log: 4, progress: 1, duration: 6 },
+        { title: 'Record workflow status', phase: 'RUNTIME · OBSERVABILITY', text: 'Relevant workflow status logging completes the runtime overview.', systems: ['logic', 'monitor'], files: ['txt-output', 'pdf-output'], packet: 'STATUS', log: 5, progress: 1, status: 'Completed', duration: 5 }
       ]
     }
   };
@@ -68,15 +65,13 @@
       if (kind !== 'api') return;
       $$('[data-api-branch]').forEach((button) => {
         button.setAttribute('aria-pressed', String(button.dataset.apiBranch === state.apiBranch));
-        button.disabled = state.step < 5 || state.playing;
+        button.disabled = state.playing;
       });
-      $$('[data-api-branch-target]').forEach((node) => node.classList.toggle('is-branch-preview', state.step >= 5 && node.dataset.apiBranchTarget === state.apiBranch));
+      $$('[data-api-branch-target]').forEach((node) => node.classList.toggle('is-branch-preview', node.dataset.apiBranchTarget === state.apiBranch));
       const outline = $('[data-sim-outline]');
       if (outline) [...outline.children].forEach((item, index) => { item.textContent = `${index + 1}. ${apiScene(index).title}`; });
       const copy = $('[data-api-branch-description]');
-      if (copy) copy.textContent = state.step < 5
-        ? 'Choose a business outcome when the API response is evaluated.'
-        : state.apiBranch === 'pass'
+      if (copy) copy.textContent = state.apiBranch === 'pass'
           ? 'PASS continues to configured file delivery and customer email.'
           : 'FAIL records business status and follows configured handling; an Azure action exception inside Try goes to Catch separately.';
     };
